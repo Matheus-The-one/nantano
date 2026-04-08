@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ModeToggle } from "@/components/ui/themwitcher";
 import { Footer } from "@/components/Footer";
-import Image from "next/image";
 import Link from "next/link";
 
 const geistSans = Geist({
@@ -85,7 +84,12 @@ export default function RootLayout({
                   href="/"
                   className="flex-shrink-0 font-bold text-xl hover:text-primary transition-colors flex items-center gap-2"
                 >
-                  <Image src="/logo.png" alt="Nantano Studio Logo" width={32} height={32} className="rounded-md" />
+                  <svg viewBox="0 0 36 36" className="w-9 h-9 text-primary" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="18 3 31 10.5 31 25.5 18 33 5 25.5 5 10.5" />
+                    <path d="M11 12V24" />
+                    <path d="M25 12V24" />
+                    <path d="M11 12L25 24" />
+                  </svg>
                   NANTANO STUDIO
                 </Link>
 

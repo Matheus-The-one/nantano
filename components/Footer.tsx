@@ -1,7 +1,6 @@
 "use client";
 
 import { Github, Mail } from "lucide-react";
-import Image from "next/image";
 
 const footerLinks = {
   "API Services": [
@@ -35,7 +34,12 @@ export function Footer() {
           {/* Brand section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src="/logo.png" alt="Nantano Studio Logo" width={32} height={32} className="rounded-md" />
+              <svg viewBox="0 0 36 36" className="w-9 h-9 text-primary" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="18 3 31 10.5 31 25.5 18 33 5 25.5 5 10.5" />
+                <path d="M11 12V24" />
+                <path d="M25 12V24" />
+                <path d="M11 12L25 24" />
+              </svg>
               <div className="font-bold text-2xl">Nantano Studio</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
