@@ -19,7 +19,7 @@ export function CTA() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              Join 100+ paying customers who trust our premium domains and API integrations. 
+              Join 100+ paying customers who trust our API integrations. 
               Start building the future of AI today.
             </p>
 

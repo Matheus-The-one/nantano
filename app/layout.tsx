@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ModeToggle } from "@/components/ui/themwitcher";
 import { Footer } from "@/components/Footer";
+import Image from "next/image";
 import Link from "next/link";
 
 const geistSans = Geist({
@@ -21,13 +22,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nantano Studio - Domains and APIs for LLMs",
   description:
-    "Access premium domains and comprehensive APIs designed specifically for Large Language Models. Build the future of AI with Nantano Studio.",
+    "Access comprehensive APIs designed specifically for Large Language Models. Build the future of AI with Nantano Studio.",
   keywords:
     "domains, llm apis, ai apis, rapidapi, developer apis, ai development, llm integrations, nantano studio",
   openGraph: {
     title: "Nantano Studio - Domains and APIs for LLMs",
     description:
-      "Access premium domains and comprehensive APIs specifically designed for Large Language Models.",
+      "Access  comprehensive APIs specifically designed for Large Language Models.",
     type: "website",
     url: "https://nantano.studio",
     siteName: "Nantano Studio",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nantano Studio - Domains and APIs for LLMs",
     description:
-      "Access premium domains and comprehensive APIs specifically designed for Large Language Models.",
+      "Access comprehensive APIs specifically designed for Large Language Models.",
   },
   alternates: {
     canonical: "https://nantano.studio",
@@ -84,9 +85,7 @@ export default function RootLayout({
                   href="/"
                   className="flex-shrink-0 font-bold text-xl hover:text-primary transition-colors flex items-center gap-2"
                 >
-                  <div className="bg-primary text-primary-foreground p-1 rounded-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-                  </div>
+                  <Image src="/logo.png" alt="Nantano Studio Logo" width={32} height={32} className="rounded-md" />
                   NANTANO STUDIO
                 </Link>
 

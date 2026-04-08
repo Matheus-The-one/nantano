@@ -1,6 +1,7 @@
 "use client";
 
 import { Github, Mail } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   "API Services": [
@@ -34,10 +35,11 @@ export function Footer() {
           {/* Brand section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
+              <Image src="/logo.png" alt="Nantano Studio Logo" width={32} height={32} className="rounded-md" />
               <div className="font-bold text-2xl">Nantano Studio</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              Premium domains and APIs built specifically for Large Language Models.
+             APIs built specifically for Large Language Models.
               We provide the infrastructure and data access you need to build
               next-generation AI applications.
             </p>

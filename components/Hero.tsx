@@ -27,12 +27,11 @@ export function Hero() {
 
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              Premium Domains &amp;
               <span className="block text-primary">APIs for LLMs</span>
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-3xl mx-auto">
-              Access premium domains and cutting-edge APIs tailored for Large Language Models. 
+              Accesscutting-edge APIs tailored for Large Language Models. 
               Power the future of AI with scalable, robust infrastructure trusted by innovators.
             </p>
 
