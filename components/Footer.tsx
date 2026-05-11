@@ -3,8 +3,8 @@
 import { Github, Mail } from "lucide-react";
 
 const footerLinks = {
-  "API Services": [
-    { name: "All Services", href: "/services" },
+  Products: [
+    { name: "All APIs", href: "/services" },
     { name: "Nike API", href: "/services/nike-api" },
     { name: "Cookpad API", href: "/services/cookpad-api" },
     { name: "Doctors API", href: "/services/doctors-api" },
@@ -43,9 +43,8 @@ export function Footer() {
               <div className="font-bold text-2xl">Nantano Studio</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-             APIs built specifically for Large Language Models.
-              We provide the infrastructure and data access you need to build
-              next-generation AI applications.
+              The API platform for AI developers. We&apos;re building the fastest way
+              to connect LLMs to real-world data sources.
             </p>
 
             {/* Social links */}
@@ -86,11 +85,11 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-16 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Nantano Studio. All rights reserved.
+            © 2025 Nantano Studio. All rights reserved.
           </p>
 
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <span>Built with ❤️ for developers</span>
+            <span>Made in Georgia, shipping globally</span>
           </div>
         </div>
       </div>

@@ -19,24 +19,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nantano Studio - Domains and APIs for LLMs",
+  title: "Nantano Studio — The API Platform for LLMs",
   description:
-    "Access comprehensive APIs designed specifically for Large Language Models. Build the future of AI with Nantano Studio.",
+    "The fastest way to connect LLMs to real-world data. Structured APIs for AI developers — products, recipes, professionals, movies, and more.",
   keywords:
-    "domains, llm apis, ai apis, rapidapi, developer apis, ai development, llm integrations, nantano studio",
+    "api platform, llm apis, ai apis, rapidapi, developer tools, ai development, data apis, nantano studio, startup",
   openGraph: {
-    title: "Nantano Studio - Domains and APIs for LLMs",
+    title: "Nantano Studio — The API Platform for LLMs",
     description:
-      "Access  comprehensive APIs specifically designed for Large Language Models.",
+      "The fastest way to connect LLMs to real-world data. Structured APIs for AI developers.",
     type: "website",
     url: "https://nantano.studio",
     siteName: "Nantano Studio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nantano Studio - Domains and APIs for LLMs",
+    title: "Nantano Studio — The API Platform for LLMs",
     description:
-      "Access comprehensive APIs specifically designed for Large Language Models.",
+      "The fastest way to connect LLMs to real-world data. Structured APIs for AI developers.",
   },
   alternates: {
     canonical: "https://nantano.studio",
@@ -99,7 +99,7 @@ export default function RootLayout({
                   <div className="flex items-center gap-3">
                     <ModeToggle />
                     <Button asChild size="sm">
-                      <a href="mailto:contact@nantano.studio">Contact Us</a>
+                      <a href="mailto:contact@nantano.studio">Get in Touch</a>
                     </Button>
                   </div>
                 </div>

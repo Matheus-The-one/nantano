@@ -3,16 +3,16 @@
 import { useEffect, useState } from "react";
 
 const companies = [
-  { name: "TechStart", logo: "TS" },
-  { name: "InnovateAI", logo: "IA" },
-  { name: "DevCorp", logo: "DC" },
-  { name: "CloudFlow", logo: "CF" },
-  { name: "DataPro", logo: "DP" },
-  { name: "AppBuilder", logo: "AB" },
-  { name: "CodeLab", logo: "CL" },
-  { name: "FutureAPI", logo: "FA" },
-  { name: "SmartTech", logo: "ST" },
-  { name: "BuildFast", logo: "BF" },
+  { name: "AI Startups", logo: "AI" },
+  { name: "SaaS Teams", logo: "ST" },
+  { name: "Indie Hackers", logo: "IH" },
+  { name: "Dev Agencies", logo: "DA" },
+  { name: "Data Teams", logo: "DT" },
+  { name: "LLM Builders", logo: "LB" },
+  { name: "Side Projects", logo: "SP" },
+  { name: "YC Founders", logo: "YC" },
+  { name: "Open Source", logo: "OS" },
+  { name: "Researchers", logo: "RS" },
 ];
 
 export function CompanyCarousel() {
@@ -31,7 +31,7 @@ export function CompanyCarousel() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <p className="text-sm text-muted-foreground mb-8">
-            Trusted by innovative companies worldwide
+            Used by builders, hackers, and teams shipping AI products
           </p>
         </div>
 

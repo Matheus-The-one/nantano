@@ -80,7 +80,7 @@ export function Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>APIs</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-2 p-3 w-[320px] lg:w-[380px]">
                   <li className="mb-2">
@@ -90,10 +90,10 @@ export function Navbar() {
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-br from-primary/10 to-primary/5 p-4 no-underline outline-none focus:shadow-md hover:from-primary/20 hover:to-primary/10 transition-colors"
                       >
                         <div className="mb-1 text-base font-medium">
-                          Nantano Studio Services
+                          Nantano Platform
                         </div>
                         <p className="text-xs leading-tight text-muted-foreground">
-                          View all our APIs on RapidAPI →
+                          Explore all our API products →
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -143,7 +143,7 @@ export function Navbar() {
                 onClick={() => setIsApiProductsVisible(!isApiProductsVisible)}
                 className="flex items-center justify-between w-full text-lg font-semibold text-left"
               >
-                <span>APIs</span>
+                <span>Products</span>
                 <ChevronDown
                   className={`h-4 w-4 transition-transform ${
                     isApiProductsVisible ? "rotate-180" : ""
@@ -156,7 +156,7 @@ export function Navbar() {
                     href="/services"
                     className="block text-sm font-semibold text-primary hover:underline"
                   >
-                    View All Services →
+                    View All Products →
                   </Link>
                   {apiServices.map((service) => (
                     <Link

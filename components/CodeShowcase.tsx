@@ -70,11 +70,11 @@ export function CodeShowcase() {
             <Terminal className="h-6 w-6 text-primary" />
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Simple, powerful integration
+            Three lines of code. You&apos;re live.
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Get started in minutes with our clean, well-documented APIs. Choose
-            your preferred language and start building.
+            No SDK bloat, no complex auth flows. Just grab your key and start
+            pulling data. Here&apos;s how simple it is.
           </p>
         </div>
 

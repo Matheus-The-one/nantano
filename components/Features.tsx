@@ -14,37 +14,37 @@ const features = [
     icon: Code,
     title: "Developer-First",
     description:
-      "Clean, intuitive APIs designed for modern development workflows with comprehensive documentation.",
+      "Built by developers, for developers. Clean SDKs, typed responses, and docs that actually make sense.",
   },
   {
     icon: Zap,
-    title: "Lightning Fast",
+    title: "Stupid Fast",
     description:
-      "Ultra-low latency responses with global CDN distribution and edge computing for optimal performance.",
+      "Sub-50ms responses, globally distributed. Your LLMs won't be waiting around for data.",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
+    title: "Production-Ready",
     description:
-      "Bank-grade security with SOC 2 compliance, end-to-end encryption, and advanced threat protection.",
+      "Battle-tested infrastructure with encryption, rate limiting, and monitoring baked in from day one.",
   },
   {
     icon: Globe,
-    title: "Global Scale",
+    title: "Scales With You",
     description:
-      "Built to handle millions of requests with auto-scaling infrastructure across multiple regions.",
+      "From your first API call to your millionth. Auto-scaling infrastructure that grows as you grow.",
   },
   {
     icon: Database,
-    title: "Real-time Data",
+    title: "Real-World Data",
     description:
-      "Live data synchronization with WebSocket support and event-driven architecture.",
+      "Structured, fresh data from real sources — products, recipes, movies, professionals, and more.",
   },
   {
     icon: Rocket,
-    title: "Rapid Integration",
+    title: "Ship in Minutes",
     description:
-      "Get up and running in minutes with SDKs for all major programming languages and frameworks.",
+      "One API key. Three lines of code. You're live. No onboarding calls, no sales demos.",
   },
 ];
 
@@ -54,11 +54,11 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Everything you need to build
+            Built for what&apos;s next
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Powerful APIs that scale with your business. From MVP to enterprise,
-            we provide the infrastructure you need to succeed.
+            We obsess over the details so you can focus on building. Here&apos;s
+            what makes Nantano different.
           </p>
         </div>
 

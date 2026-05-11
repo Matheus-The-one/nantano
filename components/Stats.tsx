@@ -1,10 +1,10 @@
 "use client";
 
 const stats = [
-  { label: "API Calls per Month", value: "2.5B+" },
-  { label: "Uptime Guarantee", value: "99.9%" },
-  { label: "Global Endpoints", value: "15+" },
-  { label: "Response Time", value: "<50ms" },
+  { label: "API Requests Served", value: "20K+" },
+  { label: "Uptime Since Launch", value: "99.9%" },
+  { label: "Live API Products", value: "5" },
+  { label: "Avg Response Time", value: "<50ms" },
 ];
 
 export function Stats() {
@@ -13,11 +13,10 @@ export function Stats() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Trusted by developers worldwide
+            Growing fast, shipping faster
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Join thousands of developers building the next generation of
-            applications
+            We launched months ago. Here&apos;s where we are today.
           </p>
         </div>
 

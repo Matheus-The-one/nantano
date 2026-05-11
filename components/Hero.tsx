@@ -20,19 +20,20 @@ export function Hero() {
             <div className="inline-flex items-center rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-3 py-1 text-sm">
               <Sparkles className="mr-2 h-4 w-4 text-primary" />
               <span className="text-muted-foreground">
-                🚀 Currently in full development mode • APIs live on RapidAPI
+                We&apos;re building the data layer for AI — now live on RapidAPI
               </span>
             </div>
           </div>
 
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="block text-primary">APIs for LLMs</span>
+              <span className="block">The API Platform</span>
+              <span className="block text-primary">Built for LLMs</span>
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-3xl mx-auto">
-              Accesscutting-edge APIs tailored for Large Language Models. 
-              Power the future of AI with scalable, robust infrastructure trusted by innovators.
+              We&apos;re on a mission to give every AI developer instant access to real-world data.
+              One platform, structured endpoints, zero friction.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -42,7 +43,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Explore on RapidAPI
+                  Get Started Free
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -51,18 +52,18 @@ export function Hero() {
             {/* Trust indicators */}
             <div className="mt-16 text-center">
               <p className="text-sm text-muted-foreground mb-6">
-                Live on RapidAPI • Trusted by 100+ paying customers
+                Shipping fast — already trusted by 100+ developers
               </p>
               <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 opacity-60">
                 <div className="text-lg sm:text-xl font-bold">
-                  20K+ API Calls
+                  20K+ Requests
                 </div>
                 <div className="text-lg sm:text-xl font-bold">
-                  100+ Customers
+                  100+ Developers
                 </div>
-                <div className="text-lg sm:text-xl font-bold">RapidAPI Hub</div>
+                <div className="text-lg sm:text-xl font-bold">5 Live APIs</div>
                 <div className="text-lg sm:text-xl font-bold">
-                  Live Production
+                  In Production
                 </div>
               </div>
             </div>
@@ -75,7 +76,7 @@ export function Hero() {
                 <div className="flex items-center space-x-2">
                   <div className="h-2 w-2 rounded-full bg-green-500"></div>
                   <span className="text-sm font-mono">
-                    APIs Live on RapidAPI
+                    All Systems Operational
                   </span>
                 </div>
               </div>
@@ -84,7 +85,7 @@ export function Hero() {
             <div className="absolute -top-4 right-1/4 transform translate-x-1/2 -rotate-6">
               <div className="rounded-lg border border-border/50 bg-card/80 backdrop-blur-sm p-4 shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <span className="text-sm font-mono">100+ Customers</span>
+                  <span className="text-sm font-mono">Growing 3x monthly</span>
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
                 </div>
               </div>
