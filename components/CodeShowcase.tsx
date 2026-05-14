@@ -1,111 +1,73 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Terminal, Copy } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Search, Bot, BarChart3, Repeat } from "lucide-react";
 
-const codeExamples = [
+const steps = [
   {
-    language: "Node.js",
-    code: `// Initialize Nantano Studio client
-import { NantanoAPI } from '@nantano/api-client';
-
-const api = new NantanoAPI({
-  apiKey: process.env.NANTANO_API_KEY
-});
-
-// Make a simple API call
-const response = await api.data.fetch({
-  endpoint: '/users',
-  filters: { active: true }
-});
-
-console.log(response.data);`,
+    step: "01",
+    icon: Search,
+    title: "Audit Your AI Presence",
+    description:
+      "We test how ChatGPT, Claude, Gemini, and Perplexity currently perceive your brand. Where are you mentioned? Where are you missing? What do they get wrong?",
   },
   {
-    language: "Python",
-    code: `# Install: pip install nantano-api
-from nantano_api import NantanoClient
-
-# Initialize client
-client = NantanoClient(api_key="your-api-key")
-
-# Fetch data with real-time updates
-data = client.data.stream(
-    endpoint="realtime/analytics",
-    callback=handle_update
-)
-
-print(f"Connected to stream: {data.id}")`,
+    step: "02",
+    icon: Bot,
+    title: "Deploy AI Agents",
+    description:
+      "Our agentic system restructures your content, metadata, and domain signals based on what LLMs actually prioritize when generating answers.",
   },
   {
-    language: "cURL",
-    code: `# Simple REST API call
-curl -X GET "https://api.nantano.dev/v1/data" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"
-
-# Response
-{
-  "status": "success",
-  "data": [...],
-  "meta": {
-    "total": 1250,
-    "page": 1
-  }
-}`,
+    step: "03",
+    icon: Repeat,
+    title: "Continuous Optimization",
+    description:
+      "Agents run 24/7. They monitor LLM outputs, track ranking changes, test new structures, and adapt as AI models evolve. You never fall behind.",
+  },
+  {
+    step: "04",
+    icon: BarChart3,
+    title: "Measure & Report",
+    description:
+      "See exactly how your AI visibility grows week over week. Track citations, recommendations, and competitive positioning across all major LLMs.",
   },
 ];
 
 export function CodeShowcase() {
-  const copyToClipboard = (code: string) => {
-    navigator.clipboard.writeText(code);
-  };
-
   return (
-    <section className="py-24 sm:py-32 bg-muted/30">
+    <section id="how-it-works" className="py-24 sm:py-32 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto w-fit rounded-full bg-primary/10 p-3 mb-6">
-            <Terminal className="h-6 w-6 text-primary" />
-          </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Three lines of code. You&apos;re live.
+            How it works
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            No SDK bloat, no complex auth flows. Just grab your key and start
-            pulling data. Here&apos;s how simple it is.
+            From zero AI presence to being recommended by every major LLM.
+            Here&apos;s our process.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-7xl">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {codeExamples.map((example, index) => (
+        <div className="mx-auto mt-16 max-w-5xl">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {steps.map((item, index) => (
               <Card
                 key={index}
                 className="relative overflow-hidden border-border/50 bg-card/80 backdrop-blur-sm"
               >
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-lg font-semibold">
-                    {example.language}
-                  </CardTitle>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => copyToClipboard(example.code)}
-                    className="h-8 w-8 p-0"
-                  >
-                    <Copy className="h-4 w-4" />
-                  </Button>
+                <CardHeader className="flex flex-row items-start space-x-4 space-y-0">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-mono text-primary mb-1">STEP {item.step}</p>
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="rounded-md bg-muted/50 p-4">
-                    <pre className="text-sm leading-relaxed overflow-x-auto">
-                      <code className="text-muted-foreground font-mono">
-                        {example.code}
-                      </code>
-                    </pre>
-                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}

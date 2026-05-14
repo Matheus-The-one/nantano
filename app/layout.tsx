@@ -19,24 +19,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nantano Studio — The API Platform for LLMs",
+  title: "Nantano Studio - Agentic AI for LLM SEO",
   description:
-    "The fastest way to connect LLMs to real-world data. Structured APIs for AI developers — products, recipes, professionals, movies, and more.",
+    "We use agentic AI to optimize your brand for discovery by ChatGPT, Claude, Gemini, and every LLM that matters. Get found by AI, not just Google.",
   keywords:
-    "api platform, llm apis, ai apis, rapidapi, developer tools, ai development, data apis, nantano studio, startup",
+    "llm seo, ai seo, agentic ai, chatgpt optimization, ai discovery, llm optimization, ai brand visibility, nantano studio",
   openGraph: {
-    title: "Nantano Studio — The API Platform for LLMs",
+    title: "Nantano Studio - Agentic AI for LLM SEO",
     description:
-      "The fastest way to connect LLMs to real-world data. Structured APIs for AI developers.",
+      "We use agentic AI to optimize your brand for discovery by ChatGPT, Claude, Gemini, and every LLM that matters.",
     type: "website",
     url: "https://nantano.studio",
     siteName: "Nantano Studio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nantano Studio — The API Platform for LLMs",
+    title: "Nantano Studio - Agentic AI for LLM SEO",
     description:
-      "The fastest way to connect LLMs to real-world data. Structured APIs for AI developers.",
+      "Get your brand discovered by AI. Our agents optimize your content for LLMs 24/7.",
   },
   alternates: {
     canonical: "https://nantano.studio",

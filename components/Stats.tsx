@@ -1,10 +1,10 @@
 "use client";
 
 const stats = [
-  { label: "API Requests Served", value: "20K+" },
-  { label: "Uptime Since Launch", value: "99.9%" },
-  { label: "Live API Products", value: "5" },
-  { label: "Avg Response Time", value: "<50ms" },
+  { label: "Avg. LLM Visibility Increase", value: "340%" },
+  { label: "AI Citations Generated", value: "50K+" },
+  { label: "Domains Optimized", value: "120+" },
+  { label: "Agents Running 24/7", value: "Always" },
 ];
 
 export function Stats() {
@@ -13,10 +13,11 @@ export function Stats() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Growing fast, shipping faster
+            Results that compound over time
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            We launched months ago. Here&apos;s where we are today.
+            Every day our agents run, your AI visibility grows. Here&apos;s
+            what we&apos;re delivering for clients right now.
           </p>
         </div>
 

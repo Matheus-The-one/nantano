@@ -1,82 +1,70 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Bot } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
   return (
     <div className="relative overflow-hidden">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-
-      {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]" />
 
       <div className="relative py-24 sm:py-32 lg:py-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Announcement badge */}
           <div className="mx-auto max-w-4xl text-center mb-8">
             <div className="inline-flex items-center rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-3 py-1 text-sm">
-              <Sparkles className="mr-2 h-4 w-4 text-primary" />
+              <Bot className="mr-2 h-4 w-4 text-primary" />
               <span className="text-muted-foreground">
-                We&apos;re building the data layer for AI — now live on RapidAPI
+                Agentic AI that optimizes your content for LLMs
               </span>
             </div>
           </div>
 
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="block">The API Platform</span>
-              <span className="block text-primary">Built for LLMs</span>
+              <span className="block">SEO for the</span>
+              <span className="block text-primary">AI era</span>
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-3xl mx-auto">
-              We&apos;re on a mission to give every AI developer instant access to real-world data.
-              One platform, structured endpoints, zero friction.
+              Traditional SEO gets you found on Google. We get you found by ChatGPT, Claude, Gemini, and every LLM that matters. Our agentic AI continuously optimizes your domains and content for AI discovery.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="w-full sm:w-auto shadow-lg" asChild>
-                <Link
-                  href="https://rapidapi.com/user/matepapava123"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Started Free
+                <Link href="mailto:contact@nantano.studio">
+                  Get Early Access
                   <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+                <Link href="#how-it-works">
+                  See How It Works
                 </Link>
               </Button>
             </div>
 
-            {/* Trust indicators */}
             <div className="mt-16 text-center">
               <p className="text-sm text-muted-foreground mb-6">
-                Shipping fast — already trusted by 100+ developers
+                Making brands discoverable by AI agents worldwide
               </p>
               <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 opacity-60">
-                <div className="text-lg sm:text-xl font-bold">
-                  20K+ Requests
-                </div>
-                <div className="text-lg sm:text-xl font-bold">
-                  100+ Developers
-                </div>
-                <div className="text-lg sm:text-xl font-bold">5 Live APIs</div>
-                <div className="text-lg sm:text-xl font-bold">
-                  In Production
-                </div>
+                <div className="text-lg sm:text-xl font-bold">LLM-First</div>
+                <div className="text-lg sm:text-xl font-bold">Agentic AI</div>
+                <div className="text-lg sm:text-xl font-bold">Auto-Optimizing</div>
+                <div className="text-lg sm:text-xl font-bold">Always Running</div>
               </div>
             </div>
           </div>
 
-          {/* Floating cards for visual interest */}
           <div className="relative mt-16 hidden lg:block">
             <div className="absolute -top-8 left-1/4 transform -translate-x-1/2 rotate-6">
               <div className="rounded-lg border border-border/50 bg-card/80 backdrop-blur-sm p-4 shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                  <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                   <span className="text-sm font-mono">
-                    All Systems Operational
+                    Agent optimizing 24/7
                   </span>
                 </div>
               </div>
@@ -85,7 +73,7 @@ export function Hero() {
             <div className="absolute -top-4 right-1/4 transform translate-x-1/2 -rotate-6">
               <div className="rounded-lg border border-border/50 bg-card/80 backdrop-blur-sm p-4 shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <span className="text-sm font-mono">Growing 3x monthly</span>
+                  <span className="text-sm font-mono">+340% LLM visibility</span>
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
                 </div>
               </div>

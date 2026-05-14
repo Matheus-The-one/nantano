@@ -3,17 +3,15 @@
 import { Github, Mail } from "lucide-react";
 
 const footerLinks = {
-  Products: [
-    { name: "All APIs", href: "/services" },
-    { name: "Nike API", href: "/services/nike-api" },
-    { name: "Cookpad API", href: "/services/cookpad-api" },
-    { name: "Doctors API", href: "/services/doctors-api" },
-    { name: "Investors Leads API", href: "/services/investors-leads-api" },
+  Product: [
+    { name: "How It Works", href: "#how-it-works" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "AI Visibility Audit", href: "mailto:contact@nantano.studio" },
   ],
   Company: [
     { name: "About", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "mailto:contact@nantano.studio" },
+    { name: "Book a Demo", href: "mailto:contact@nantano.studio" },
   ],
   Legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -43,8 +41,8 @@ export function Footer() {
               <div className="font-bold text-2xl">Nantano Studio</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              The API platform for AI developers. We&apos;re building the fastest way
-              to connect LLMs to real-world data sources.
+              We use agentic AI to get your brand discovered by ChatGPT, Claude,
+              Gemini, and every LLM that matters. SEO for the AI era.
             </p>
 
             {/* Social links */}

@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react";
 
-const companies = [
-  { name: "AI Startups", logo: "AI" },
-  { name: "SaaS Teams", logo: "ST" },
-  { name: "Indie Hackers", logo: "IH" },
-  { name: "Dev Agencies", logo: "DA" },
-  { name: "Data Teams", logo: "DT" },
-  { name: "LLM Builders", logo: "LB" },
-  { name: "Side Projects", logo: "SP" },
-  { name: "YC Founders", logo: "YC" },
-  { name: "Open Source", logo: "OS" },
-  { name: "Researchers", logo: "RS" },
+const audiences = [
+  { name: "SaaS Companies", logo: "SC" },
+  { name: "E-Commerce", logo: "EC" },
+  { name: "B2B Brands", logo: "B2" },
+  { name: "Content Sites", logo: "CS" },
+  { name: "Marketplaces", logo: "MP" },
+  { name: "Agencies", logo: "AG" },
+  { name: "Startups", logo: "ST" },
+  { name: "Enterprise", logo: "EN" },
+  { name: "Personal Brands", logo: "PB" },
+  { name: "Local Business", logo: "LB" },
 ];
 
 export function CompanyCarousel() {
@@ -20,7 +20,7 @@ export function CompanyCarousel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % companies.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % audiences.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -31,28 +31,27 @@ export function CompanyCarousel() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <p className="text-sm text-muted-foreground mb-8">
-            Used by builders, hackers, and teams shipping AI products
+            Helping brands get discovered by AI — across every industry
           </p>
         </div>
 
-        {/* Desktop carousel */}
         <div className="hidden md:block overflow-hidden">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${(currentIndex * 100) / 5}%)` }}
           >
-            {[...companies, ...companies].map((company, index) => (
+            {[...audiences, ...audiences].map((item, index) => (
               <div
-                key={`${company.name}-${index}`}
+                key={`${item.name}-${index}`}
                 className="flex-none w-1/5 px-8"
               >
                 <div className="flex items-center justify-center h-16">
                   <div className="flex items-center space-x-3 opacity-60 hover:opacity-100 transition-opacity">
                     <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center font-bold text-primary">
-                      {company.logo}
+                      {item.logo}
                     </div>
                     <span className="font-semibold text-lg">
-                      {company.name}
+                      {item.name}
                     </span>
                   </div>
                 </div>
@@ -61,26 +60,24 @@ export function CompanyCarousel() {
           </div>
         </div>
 
-        {/* Mobile grid */}
         <div className="md:hidden grid grid-cols-2 gap-6">
-          {companies.slice(0, 6).map((company, index) => (
+          {audiences.slice(0, 6).map((item) => (
             <div
-              key={company.name}
+              key={item.name}
               className="flex items-center justify-center"
             >
               <div className="flex items-center space-x-3 opacity-60">
                 <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center font-bold text-primary text-sm">
-                  {company.logo}
+                  {item.logo}
                 </div>
-                <span className="font-semibold">{company.name}</span>
+                <span className="font-semibold">{item.name}</span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Indicators */}
         <div className="hidden md:flex justify-center mt-8 space-x-2">
-          {companies.map((_, index) => (
+          {audiences.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

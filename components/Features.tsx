@@ -7,44 +7,44 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Code, Zap, Shield, Globe, Database, Rocket } from "lucide-react";
+import { Bot, Search, Globe, Brain, RefreshCw, BarChart3 } from "lucide-react";
 
 const features = [
   {
-    icon: Code,
-    title: "Developer-First",
+    icon: Bot,
+    title: "Autonomous AI Agents",
     description:
-      "Built by developers, for developers. Clean SDKs, typed responses, and docs that actually make sense.",
+      "Our agents crawl, analyze, and restructure your content around the clock — no manual intervention needed.",
   },
   {
-    icon: Zap,
-    title: "Stupid Fast",
+    icon: Search,
+    title: "LLM Discovery Optimization",
     description:
-      "Sub-50ms responses, globally distributed. Your LLMs won't be waiting around for data.",
+      "We optimize how ChatGPT, Claude, Perplexity, and other AI models find, understand, and recommend your brand.",
   },
   {
-    icon: Shield,
-    title: "Production-Ready",
+    icon: Brain,
+    title: "Semantic Structuring",
     description:
-      "Battle-tested infrastructure with encryption, rate limiting, and monitoring baked in from day one.",
+      "Automatically restructure your content with schema, metadata, and semantic signals that LLMs prioritize.",
   },
   {
     icon: Globe,
-    title: "Scales With You",
+    title: "Domain Authority for AI",
     description:
-      "From your first API call to your millionth. Auto-scaling infrastructure that grows as you grow.",
+      "Build domain-level trust signals that make LLMs consistently reference and recommend your brand.",
   },
   {
-    icon: Database,
-    title: "Real-World Data",
+    icon: RefreshCw,
+    title: "Continuous Optimization",
     description:
-      "Structured, fresh data from real sources — products, recipes, movies, professionals, and more.",
+      "LLM ranking factors change weekly. Our agents adapt in real-time so you never fall behind.",
   },
   {
-    icon: Rocket,
-    title: "Ship in Minutes",
+    icon: BarChart3,
+    title: "AI Visibility Analytics",
     description:
-      "One API key. Three lines of code. You're live. No onboarding calls, no sales demos.",
+      "Track exactly how often LLMs cite your brand, what queries trigger mentions, and where you rank vs. competitors.",
   },
 ];
 
@@ -54,11 +54,11 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Built for what&apos;s next
+            What our AI agents do for you
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            We obsess over the details so you can focus on building. Here&apos;s
-            what makes Nantano different.
+            Think of us as your always-on SEO team — but for the AI landscape.
+            We make sure LLMs know who you are and recommend you.
           </p>
         </div>
 
