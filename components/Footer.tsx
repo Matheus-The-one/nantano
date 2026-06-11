@@ -33,7 +33,7 @@ export function Footer() {
           {/* Brand section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Logo className="w-8 h-8" />
+              <Logo className="w-10 h-7 text-primary" />
               <div className="font-bold text-2xl">Nantano AI</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">

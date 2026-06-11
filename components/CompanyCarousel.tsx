@@ -1,90 +1,155 @@
 "use client";
 
-import { useEffect, useState } from "react";
+const partners = [
+  {
+    name: "NVIDIA",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.762 3.781-5.725 3.781c-.442 0-.87-.068-1.192-.181v-4.575c1.264.148 1.52.6 2.291 1.676l1.701-1.428S11.147 8.676 8.948 8.798m0-3.14v1.16l.424-.02c5.147-.183 8.502 4.203 8.502 4.203s-3.866 4.464-7.772 4.464c-.41 0-.795-.04-1.154-.112v1.394c.304.043.62.068.945.068 3.497 0 6.03-1.79 8.49-3.862.406.325 2.07 1.117 2.41 1.46-2.346 1.88-7.813 3.8-10.854 3.8-.34 0-.665-.022-.99-.06v1.846h13.5V5.657H8.948zm0 11.56v1.18c-4.045-.676-5.093-4.592-5.093-4.592s1.79-1.975 5.093-2.298v1.28c-.005 0-.01 0-.013-.002-1.878-.217-3.345 1.56-3.345 1.56s.856 2.394 3.358 2.872M3.551 10.855s2.599-3.607 7.622-4.021V5.657H1.5v13.125h1.633c-.048-.003.418-5.32.418-7.927" />
+      </svg>
+    ),
+  },
+  {
+    name: "AWS",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.374 6.18 6.18 0 0 1-.248-.467c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.296.072-.583.16-.863.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.44.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.264-.168.312a.549.549 0 0 1-.32.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.216-.151-.248-.223a.504.504 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.503 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.415-.287-.806-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415a3.32 3.32 0 0 1 1.014-.151c.18 0 .367.008.559.024.191.016.367.048.534.08.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.702 0 .224.08.416.24.567.16.152.454.304.87.44l1.133.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.742.167-1.142.167z" />
+        <path d="M21.725 16.92C19.129 18.9 15.36 19.945 12.12 19.945c-4.559 0-8.665-1.686-11.77-4.494-.243-.22-.025-.52.267-.349 3.353 1.95 7.498 3.127 11.782 3.127 2.891 0 6.07-.6 8.993-1.84.44-.19.81.288.333.53z" />
+        <path d="M22.67 15.834c-.332-.424-2.19-.2-3.024-.102-.254.031-.293-.19-.064-.35 1.482-1.04 3.91-.74 4.193-.391.285.35-.075 2.775-1.464 3.934-.213.179-.417.083-.322-.152.312-.78 1.013-2.514.681-2.939z" />
+      </svg>
+    ),
+  },
+  {
+    name: "MongoDB",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0 1 11.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z" />
+      </svg>
+    ),
+  },
+  {
+    name: "RapidAPI",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M12 0C5.375 0 0 5.375 0 12s5.375 12 12 12 12-5.375 12-12S18.625 0 12 0zm-.624 17.897h-2.07v-5.46H7.152v-1.79h2.154V9.122c0-2.108 1.278-3.268 3.152-3.268.9 0 1.674.067 1.898.097v2.21h-1.3c-1.02 0-1.218.486-1.218 1.198v1.288h2.436l-.318 1.79h-2.118v5.46h-.462z" />
+      </svg>
+    ),
+  },
+  {
+    name: "OpenAI",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.998 5.998 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Vercel",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+        <path d="M24 22.525H0l12-21.05 12 21.05z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Python",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Next.js",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727zM16.8 7.2h-1.6v9.6h1.6V7.2z" />
+      </svg>
+    ),
+  },
+];
 
-const industries = [
-  { name: "Entertainment", logo: "EN" },
-  { name: "Healthcare", logo: "HC" },
-  { name: "E-Commerce", logo: "EC" },
-  { name: "Food & Recipes", logo: "FR" },
-  { name: "Finance", logo: "FN" },
-  { name: "Investor Data", logo: "ID" },
-  { name: "Retail", logo: "RT" },
-  { name: "Sports", logo: "SP" },
-  { name: "Real Estate", logo: "RE" },
-  { name: "Travel", logo: "TR" },
+const techStack = [
+  { name: "Machine Learning", description: "Custom models for data extraction" },
+  { name: "Natural Language Processing", description: "Understanding unstructured content" },
+  { name: "Distributed Computing", description: "Parallel processing at scale" },
+  { name: "Real-time Pipelines", description: "Always-fresh data delivery" },
 ];
 
 export function CompanyCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % industries.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="py-16 bg-muted/20">
+    <section className="py-20 bg-muted/20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <p className="text-sm text-muted-foreground mb-8">
-            We extract and structure data across industries — then ship it as APIs
+        <div className="mx-auto max-w-2xl text-center mb-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+            Our Tech Stack & Partners
+          </p>
+          <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            Built on world-class infrastructure
+          </h3>
+          <p className="mt-4 text-muted-foreground">
+            We leverage the best AI and cloud tools to mine, process, and serve data at scale.
           </p>
         </div>
 
-        <div className="hidden md:block overflow-hidden">
-          <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${(currentIndex * 100) / 5}%)` }}
-          >
-            {[...industries, ...industries].map((item, index) => (
+        {/* Infinite scrolling logos - row 1 */}
+        <div className="relative mb-6">
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/20 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/20 to-transparent z-10 pointer-events-none" />
+          <div className="flex animate-scroll-left">
+            {[...partners, ...partners].map((partner, index) => (
               <div
-                key={`${item.name}-${index}`}
-                className="flex-none w-1/5 px-8"
+                key={`${partner.name}-${index}`}
+                className="flex-none mx-6"
               >
-                <div className="flex items-center justify-center h-16">
-                  <div className="flex items-center space-x-3 opacity-60 hover:opacity-100 transition-opacity">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center font-bold text-primary">
-                      {item.logo}
-                    </div>
-                    <span className="font-semibold text-lg">
-                      {item.name}
-                    </span>
-                  </div>
+                <div className="flex items-center gap-3 rounded-full border border-border/50 bg-background/80 backdrop-blur-sm px-5 py-3 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+                  <span className="text-foreground/70">{partner.svg}</span>
+                  <span className="font-medium text-sm whitespace-nowrap">
+                    {partner.name}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="md:hidden grid grid-cols-2 gap-6">
-          {industries.slice(0, 6).map((item) => (
-            <div
-              key={item.name}
-              className="flex items-center justify-center"
-            >
-              <div className="flex items-center space-x-3 opacity-60">
-                <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center font-bold text-primary text-sm">
-                  {item.logo}
+        {/* Infinite scrolling logos - row 2 (reverse) */}
+        <div className="relative mb-16">
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/20 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/20 to-transparent z-10 pointer-events-none" />
+          <div className="flex animate-scroll-right">
+            {[...partners, ...partners].reverse().map((partner, index) => (
+              <div
+                key={`rev-${partner.name}-${index}`}
+                className="flex-none mx-6"
+              >
+                <div className="flex items-center gap-3 rounded-full border border-border/50 bg-background/80 backdrop-blur-sm px-5 py-3 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+                  <span className="text-foreground/70">{partner.svg}</span>
+                  <span className="font-medium text-sm whitespace-nowrap">
+                    {partner.name}
+                  </span>
                 </div>
-                <span className="font-semibold">{item.name}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="hidden md:flex justify-center mt-8 space-x-2">
-          {industries.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                index === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
-              }`}
-            />
+        {/* Tech capability cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {techStack.map((tech) => (
+            <div
+              key={tech.name}
+              className="group relative rounded-xl border border-border/50 bg-background/60 backdrop-blur-sm p-5 hover:border-primary/40 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative">
+                <div className="h-2 w-2 rounded-full bg-primary mb-3" />
+                <h4 className="font-semibold text-sm mb-1">{tech.name}</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {tech.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
