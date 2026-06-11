@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Doctors API on RapidAPI | Find Doctors & Medical Professionals",
+  title: "Doctors API  | Find Doctors & Medical Professionals",
   description:
-    "Access comprehensive doctors database, medical professionals, specialties, and healthcare provider information. Perfect for healthcare apps, doctor finder platforms, and medical directory services. Available on RapidAPI.",
+    "Access comprehensive doctors database, medical professionals, specialties, and healthcare provider information. Perfect for healthcare apps, doctor finder platforms, and medical directory services. Available .",
   keywords:
     "doctors api, medical api, healthcare api, doctors database api, find doctors api, medical professionals api, healthcare providers api, doctor finder api, medical directory api, physicians api, specialists api, doctors contact api, medical data api, healthcare information api, doctors search api",
   openGraph: {
-    title: "Doctors API on RapidAPI | Find Doctors & Medical Professionals",
+    title: "Doctors API  | Find Doctors & Medical Professionals",
     description:
       "Access comprehensive doctors database, medical professionals, specialties, and healthcare provider information. Perfect for healthcare apps and medical directory services.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Doctors API on RapidAPI | Find Doctors & Medical Professionals",
+    title: "Doctors API  | Find Doctors & Medical Professionals",
     description:
       "Access comprehensive doctors database, medical professionals, specialties, and healthcare provider information.",
   },
@@ -115,7 +115,7 @@ export default function DoctorsApiPage() {
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              <span className="text-primary">Doctors API</span> on RapidAPI
+              <span className="text-primary">Doctors API</span> 
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ export default function DoctorsApiPage() {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  Access on RapidAPI
+                  Access 
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -335,7 +335,7 @@ console.log(doctor);`}
               <p className="text-lg leading-8 text-muted-foreground max-w-2xl mx-auto mb-8">
                 Access comprehensive doctors database and build amazing
                 healthcare applications. Join 100+ developers already using our
-                Doctors API on RapidAPI.
+                Doctors API .
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -346,7 +346,7 @@ console.log(doctor);`}
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    Get Started on RapidAPI
+                    Get Started 
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

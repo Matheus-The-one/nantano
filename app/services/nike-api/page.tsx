@@ -21,13 +21,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Nike API on RapidAPI | Access Nike Products & Inventory Data",
+  title: "Nike API  | Access Nike Products & Inventory Data",
   description:
-    "Access Nike products, inventory, pricing, and e-commerce data through our comprehensive Nike API. Perfect for price comparison, inventory management, and product analysis. Available on RapidAPI with 20,000+ calls.",
+    "Access Nike products, inventory, pricing, and e-commerce data through our comprehensive Nike API. Perfect for price comparison, inventory management, and product analysis. Available  with 20,000+ calls.",
   keywords:
     "nike api, rapidapi nike, nike products api, nike inventory api, nike price api, nike data api, nike ecommerce api, nike shoes api, nike clothing api, nike products data, nike api documentation, nike api pricing, nike api integration, nike api developer, nike api access",
   openGraph: {
-    title: "Nike API on RapidAPI | Access Nike Products & Inventory Data",
+    title: "Nike API  | Access Nike Products & Inventory Data",
     description:
       "Access Nike products, inventory, pricing, and e-commerce data through our comprehensive Nike API. Perfect for price comparison, inventory management, and product analysis.",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nike API on RapidAPI | Access Nike Products & Inventory Data",
+    title: "Nike API  | Access Nike Products & Inventory Data",
     description:
       "Access Nike products, inventory, pricing, and e-commerce data through our comprehensive Nike API.",
   },
@@ -113,7 +113,7 @@ export default function NikeApiPage() {
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              <span className="text-primary">Nike API</span> on RapidAPI
+              <span className="text-primary">Nike API</span> 
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
@@ -130,7 +130,7 @@ export default function NikeApiPage() {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  Access on RapidAPI
+                  Access 
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -332,7 +332,7 @@ console.log(product);`}
               <p className="text-lg leading-8 text-muted-foreground max-w-2xl mx-auto mb-8">
                 Access Nike's complete product catalog and build amazing
                 applications. Join 100+ developers already using our Nike API on
-                RapidAPI.
+.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -343,7 +343,7 @@ console.log(product);`}
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    Get Started on RapidAPI
+                    Get Started 
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

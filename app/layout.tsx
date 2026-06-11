@@ -20,24 +20,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nantano AI — AI-Powered Data APIs & Process Mining",
+  title: "Nantano AI — Process Intelligence & Pattern Detection",
   description:
-    "We mine the web with AI, extract structured data, and ship production-ready APIs as a service. Process mining meets SaaS — data products built by machines, consumed by developers.",
+    "We structure enterprise data, detect process anomalies with AI, and deliver real-time alerts. Find hidden patterns and fix broken processes before they cost you.",
   keywords:
-    "ai api, process mining, data extraction, ai saas, web scraping api, structured data api, ai startup studio, nantano studio",
+    "process intelligence, pattern detection, anomaly detection, enterprise ai, process monitoring, real-time alerts, nantano ai",
   openGraph: {
-    title: "Nantano AI — AI-Powered Data APIs & Process Mining",
+    title: "Nantano AI — Process Intelligence & Pattern Detection",
     description:
-      "We mine the web with AI, extract structured data, and ship production-ready APIs. Process mining meets SaaS.",
+      "Structure data. Detect patterns. Get real-time alerts. AI-powered process intelligence for enterprises.",
     type: "website",
     url: "https://nantano.ai",
     siteName: "Nantano AI",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nantano AI — AI-Powered Data APIs & Process Mining",
+    title: "Nantano AI — Process Intelligence & Pattern Detection",
     description:
-      "AI mines the data. We ship the APIs. Developers build with them.",
+      "Find hidden patterns. Fix broken processes. Real-time AI alerts.",
   },
   alternates: {
     canonical: "https://nantano.ai",

@@ -1,9 +1,9 @@
 "use client";
 
 const stats = [
-  { label: "API Calls Served", value: "120K+" },
-  { label: "Paying Customers", value: "200+" },
-  { label: "Live API Products", value: "5" },
+  { label: "Processes Monitored", value: "500+" },
+  { label: "Patterns Detected Monthly", value: "12K+" },
+  { label: "Avg. Response Time", value: "<2s" },
   { label: "Uptime", value: "99.9%" },
 ];
 
@@ -13,11 +13,10 @@ export function Stats() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Shipping data products at startup speed
+            Built for enterprise operations
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            We build fast, ship faster, and let AI do the heavy lifting. Here&apos;s
-            where we stand today.
+            Real-time process intelligence at scale. Always on, always watching.
           </p>
         </div>
 

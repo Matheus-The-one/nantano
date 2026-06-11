@@ -5,9 +5,9 @@ import { Logo } from "@/components/Logo";
 
 const footerLinks = {
   Product: [
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "APIs & Pricing", href: "/pricing" },
-    { name: "Request Custom API", href: "mailto:contact@nantano.ai" },
+    { name: "How It Works", href: "/process-mining" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Book a Demo", href: "mailto:contact@nantano.ai" },
   ],
   Company: [
     { name: "About", href: "/about" },
@@ -37,9 +37,9 @@ export function Footer() {
               <div className="font-bold text-2xl">Nantano AI</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              AI-powered process mining meets API development. We extract
-              structured data from the web and ship it as production-ready
-              SaaS APIs for developers.
+              AI-powered process intelligence. We structure your enterprise data,
+              detect patterns and anomalies, and deliver real-time alerts when
+              something needs attention.
             </p>
 
             {/* Social links */}

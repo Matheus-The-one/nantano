@@ -23,14 +23,14 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Investors Leads API on RapidAPI | Access Investor Contact Emails & Business Leads",
+    "Investors Leads API  | Access Investor Contact Emails & Business Leads",
   description:
-    "Access investor contact emails, business leads, funding data, and investment opportunities. Perfect for startups, fundraising platforms, and business development. Available on RapidAPI with verified contact information.",
+    "Access investor contact emails, business leads, funding data, and investment opportunities. Perfect for startups, fundraising platforms, and business development. Available  with verified contact information.",
   keywords:
     "investors api, business leads api, investor contacts api, funding data api, startup investors api, venture capital api, angel investors api, business contacts api, investor email api, leads generation api, fundraising api, investment opportunities api, business development api, investor database api, funding leads api",
   openGraph: {
     title:
-      "Investors Leads API on RapidAPI | Access Investor Contact Emails & Business Leads",
+      "Investors Leads API  | Access Investor Contact Emails & Business Leads",
     description:
       "Access investor contact emails, business leads, funding data, and investment opportunities. Perfect for startups, fundraising platforms, and business development.",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Investors Leads API on RapidAPI | Access Investor Contact Emails & Business Leads",
+      "Investors Leads API  | Access Investor Contact Emails & Business Leads",
     description:
       "Access investor contact emails, business leads, funding data, and investment opportunities.",
   },
@@ -120,7 +120,7 @@ export default function InvestorsLeadsApiPage() {
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
               <span className="text-primary">Investors Leads API</span> on
-              RapidAPI
+
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
@@ -137,7 +137,7 @@ export default function InvestorsLeadsApiPage() {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  Access on RapidAPI
+                  Access 
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -340,7 +340,7 @@ console.log(investor.contact_email);`}
                 Access verified investor contacts and business leads data to
                 build amazing fundraising and business development applications.
                 Join 100+ developers already using our Investors Leads API on
-                RapidAPI.
+.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -351,7 +351,7 @@ console.log(investor.contact_email);`}
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    Get Started on RapidAPI
+                    Get Started 
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

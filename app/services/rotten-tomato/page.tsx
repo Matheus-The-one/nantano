@@ -64,7 +64,7 @@ export default function RottenTomatoPage() {
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
               Access comprehensive movie data, ratings, and reviews through our
-              Rotten Tomato API. Live on RapidAPI with 20,000+ calls and 100+
+              Rotten Tomato API. Live  with 20,000+ calls and 100+
               paying customers. Perfect for entertainment applications and movie
               discovery platforms.
             </p>
@@ -76,7 +76,7 @@ export default function RottenTomatoPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Try on RapidAPI
+                  Try 
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -297,7 +297,7 @@ console.log(movieData);
               </div>
 
               <div className="mt-6 text-sm text-muted-foreground">
-                Available on RapidAPI • Trusted by 100+ customers
+                Available  • Trusted by 100+ customers
               </div>
             </div>
           </div>

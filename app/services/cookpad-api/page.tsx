@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cookpad API on RapidAPI | Access Recipes & Cooking Data",
+  title: "Cookpad API  | Access Recipes & Cooking Data",
   description:
-    "Access Cookpad recipes, cooking instructions, ingredients, and food data. Perfect for recipe apps, food platforms, and cooking applications. Available on RapidAPI with comprehensive recipe database.",
+    "Access Cookpad recipes, cooking instructions, ingredients, and food data. Perfect for recipe apps, food platforms, and cooking applications. Available  with comprehensive recipe database.",
   keywords:
     "cookpad api, recipes api, cooking api, food api, recipe data api, cookpad recipes api, cooking instructions api, ingredients api, food database api, recipe search api, cooking data api, food information api, recipe app api, cooking platform api, cookpad data api",
   openGraph: {
-    title: "Cookpad API on RapidAPI | Access Recipes & Cooking Data",
+    title: "Cookpad API  | Access Recipes & Cooking Data",
     description:
       "Access Cookpad recipes, cooking instructions, ingredients, and food data. Perfect for recipe apps, food platforms, and cooking applications.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cookpad API on RapidAPI | Access Recipes & Cooking Data",
+    title: "Cookpad API  | Access Recipes & Cooking Data",
     description:
       "Access Cookpad recipes, cooking instructions, ingredients, and food data.",
   },
@@ -116,7 +116,7 @@ export default function CookpadApiPage() {
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              <span className="text-primary">Cookpad API</span> on RapidAPI
+              <span className="text-primary">Cookpad API</span> 
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ export default function CookpadApiPage() {
                   rel="noopener noreferrer"
                   className="flex items-center"
                 >
-                  Access on RapidAPI
+                  Access 
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -335,7 +335,7 @@ console.log(recipe.instructions);`}
               <p className="text-lg leading-8 text-muted-foreground max-w-2xl mx-auto mb-8">
                 Access Cookpad's comprehensive recipe database and build amazing
                 food and cooking applications. Join 100+ developers already
-                using our Cookpad API on RapidAPI.
+                using our Cookpad API .
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -346,7 +346,7 @@ console.log(recipe.instructions);`}
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    Get Started on RapidAPI
+                    Get Started 
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

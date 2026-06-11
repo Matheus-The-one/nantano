@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "APIs & Pricing", href: "/pricing" },
+  { name: "How It Works", href: "/process-mining" },
+  { name: "Pricing", href: "/pricing" },
 ];
 
 export function Navbar() {

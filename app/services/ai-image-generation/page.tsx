@@ -61,7 +61,7 @@ export default function AIImageGenerationPage() {
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
               Transform your ideas into stunning visuals with our advanced AI
-              image generation API. Live on RapidAPI with 20,000+ calls and 100+
+              image generation API. Live  with 20,000+ calls and 100+
               paying customers. Create professional-quality images from simple
               text descriptions.
             </p>
@@ -73,7 +73,7 @@ export default function AIImageGenerationPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Try on RapidAPI
+                  Try 
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

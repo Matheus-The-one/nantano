@@ -1,585 +1,165 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  CheckCircle,
-  ExternalLink,
-  Crown,
-  Coffee,
-  Activity,
-  DollarSign,
-  ShoppingCart,
-  Cpu,
-} from "lucide-react";
-import Script from "next/script";
-
-type PricingTier = {
-  plan: string;
-  price: string;
-  limit: string;
-  note?: string;
-};
+import { CheckCircle, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
-  title: "AI-Powered APIs & Pricing — Nantano AI",
+  title: "Pricing — Nantano AI",
   description:
-    "Explore our AI-mined data APIs: movies, recipes, healthcare, investors, and e-commerce. Free tiers available. Subscribe on RapidAPI and start building.",
-  keywords:
-    "ai api, data api, movie api, recipe api, healthcare api, investor api, process mining api, nantano studio",
+    "Simple, transparent pricing for AI-powered process intelligence. Choose the plan that fits your team.",
 };
 
+const plans = [
+  {
+    name: "Starter",
+    price: "$0",
+    period: "forever",
+    description: "For teams exploring process intelligence",
+    features: [
+      "Up to 3 process streams",
+      "Basic pattern detection",
+      "Daily digest notifications",
+      "7-day data retention",
+      "Community support",
+    ],
+    cta: "Get Started",
+    highlighted: false,
+  },
+  {
+    name: "Pro",
+    price: "$49",
+    period: "/month",
+    description: "For growing teams with active operations",
+    features: [
+      "Unlimited process streams",
+      "Advanced AI pattern detection",
+      "Real-time WebSocket alerts",
+      "90-day data retention",
+      "Priority support",
+      "Custom alert rules",
+      "Team collaboration",
+    ],
+    cta: "Start Free Trial",
+    highlighted: true,
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    description: "For organizations with complex needs",
+    features: [
+      "Everything in Pro",
+      "Unlimited data retention",
+      "Dedicated account manager",
+      "Custom integrations",
+      "SLA guarantees",
+      "On-premise deployment option",
+      "SSO & advanced security",
+      "Custom AI model training",
+    ],
+    cta: "Book a Demo",
+    highlighted: false,
+  },
+];
+
 export default function PricingPage() {
-  const apis = [
-    {
-      name: "Rotten Tomato API",
-      description:
-        "AI-mined movie ratings, reviews, box office data, and streaming availability — structured and ready to query",
-      rapidApiUrl: "https://rapidapi.com/matepapava123/api/rottentomato",
-      features: [
-        "Movie ratings & reviews",
-        "Box office data",
-        "Cast & crew information",
-        "Streaming availability",
-        "Critics scores & reviews",
-        "Movie posters & spoilers",
-      ],
-      status: "Live" as const,
-      icon: Crown,
-      gradient: "from-orange-500/10 to-red-500/10",
-      pricing: [
-        {
-          plan: "Basic",
-          price: "$0.00",
-          limit: "5 requests/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Pro",
-          price: "$5.00",
-          limit: "5,000 requests/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Ultra",
-          price: "$10.00",
-          limit: "50,000 requests/month",
-          note: "+$0.05 per additional",
-        },
-      ],
-    },
-    {
-      name: "Cookpad API",
-      description:
-        "AI-extracted recipe data, nutritional info, and cooking metadata from one of the world's largest recipe platforms",
-      rapidApiUrl: "https://rapidapi.com/matepapava123/api/cookpad-api",
-      features: [
-        "Extensive recipe database",
-        "Nutritional information",
-        "Ingredient-based search",
-        "Meal planning tools",
-        "User ratings and reviews",
-        "Cooking time estimates",
-      ],
-      status: "Live" as const,
-      icon: Coffee,
-      gradient: "from-green-500/10 to-yellow-500/10",
-      pricing: [
-        {
-          plan: "Basic",
-          price: "$0.00",
-          limit: "5 calls/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Pro",
-          price: "$5.00",
-          limit: "5,000 calls/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Ultra",
-          price: "$10.00",
-          limit: "50,000 calls/month",
-          note: "+$0.05 per additional",
-        },
-      ],
-    },
-    {
-      name: "Doctors API",
-      description:
-        "Healthcare provider directory mined with AI — specialties, locations, credentials, and availability in one endpoint",
-      rapidApiUrl:
-        "https://rapidapi.com/matepapava123/api/doctors-api",
-      features: [
-        "Healthcare provider directory",
-        "Specialty search",
-        "Location-based matching",
-        "Credentials verification",
-        "Patient reviews",
-        "Appointment availability",
-      ],
-      status: "Live" as const,
-      icon: Activity,
-      gradient: "from-blue-500/10 to-cyan-500/10",
-      pricing: [
-        {
-          plan: "Basic",
-          price: "$0.00",
-          limit: "5 calls/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Pro",
-          price: "$5.00",
-          limit: "5,000 calls/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Ultra",
-          price: "$15.00",
-          limit: "50,000 calls/month",
-          note: "+$0.05 per additional",
-        },
-        {
-          plan: "Mega",
-          price: "$45.00",
-          limit: "500,000 calls/month",
-          note: "No extra charges",
-        },
-      ],
-    },
-    {
-      name: "Investors Leads API",
-      description:
-        "AI-aggregated investor data — contacts, preferences, portfolio history, and deal flow intelligence",
-      rapidApiUrl: "https://rapidapi.com/matepapava123/api/investors-leads-api",
-      features: [
-        "Qualified investor contacts",
-        "Investment preferences",
-        "Portfolio analysis",
-        "Market trend insights",
-        "Due diligence data",
-        "Investment history",
-      ],
-      status: "Live" as const,
-      icon: DollarSign,
-      gradient: "from-indigo-500/10 to-violet-500/10",
-      pricing: [
-        {
-          plan: "Basic",
-          price: "Free",
-          limit: "5 calls/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Pro",
-          price: "$10/month",
-          limit: "500 calls/month",
-          note: "Hard limit",
-        },
-        {
-          plan: "Ultra",
-          price: "$49/month",
-          limit: "10,000 calls/month",
-          note: "Hard limit",
-        },
-        {
-          plan: "Mega",
-          price: "$199/month",
-          limit: "50,000 calls/month",
-          note: "Hard limit",
-        },
-      ],
-    },
-    {
-      name: "Nike API",
-      description:
-        "Real-time product catalog, inventory, pricing, and release data extracted from Nike's ecosystem via AI",
-      rapidApiUrl: "https://rapidapi.com/matepapava123/api/nike-api",
-      features: [
-        "Product catalog access",
-        "Real-time inventory",
-        "Pricing information",
-        "Release dates",
-        "Product specifications",
-        "Regional availability",
-      ],
-      status: "Live" as const,
-      icon: ShoppingCart,
-      gradient: "from-gray-500/10 to-slate-500/10",
-      pricing: [
-        {
-          plan: "Basic",
-          price: "$0.00",
-          limit: "5 calls/month",
-          note: "Hard Limit",
-        },
-        {
-          plan: "Pro",
-          price: "$2.00",
-          limit: "500 calls/month",
-          note: "+$0.05 per additional",
-        },
-        {
-          plan: "Ultra",
-          price: "$5.00",
-          limit: "5,000 calls/month",
-          note: "+$0.01 per additional",
-        },
-        {
-          plan: "Mega",
-          price: "$15.00",
-          limit: "50,000 calls/month",
-          note: "+$0.01 per additional",
-        },
-      ],
-    },
-  ];
-
-  const stats = [
-    {
-      label: "Total API Calls",
-      value: "120K+",
-      description: "Across all endpoints",
-    },
-    {
-      label: "Paying Customers",
-      value: "200+",
-      description: "Production users",
-    },
-    { label: "Live APIs", value: "5", description: "AI-mined data products" },
-    { label: "Uptime", value: "99.9%", description: "Reliable service" },
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Nantano AI APIs",
-    applicationCategory: "API",
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "USD",
-      lowPrice: "0",
-      highPrice: "199",
-      offerCount: "5",
-    },
-    description:
-      "AI-powered data APIs built through process mining. Movies, recipes, healthcare, investors, and e-commerce data.",
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Script id="structured-data" type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </Script>
-
-      {/* Hero Section */}
-      <section className="py-24 sm:py-32 relative overflow-hidden">
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="flex justify-center mb-8">
-              <div className="rounded-full bg-primary/10 p-4">
-                <Cpu className="h-12 w-12 text-primary" />
-              </div>
-            </div>
-
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              AI-Mined Data APIs
+      {/* Hero */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Simple, transparent pricing
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              Every API below is built by our AI process mining pipeline —
-              extracting, structuring, and serving data that doesn&apos;t have
-              clean access anywhere else. Subscribe on RapidAPI and start building.
+            <p className="mt-6 text-lg text-muted-foreground">
+              Start free. Scale as your process intelligence needs grow.
+              No hidden fees, no surprises.
             </p>
-
-            <div className="mt-8 inline-flex items-center rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-4 py-2 text-sm">
-              <span className="text-muted-foreground">
-                5 Live APIs &bull; Free tiers on all &bull; 200+ production customers
-              </span>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Pricing Plans */}
+      <section className="pb-24 sm:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {stat.value}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative flex flex-col rounded-2xl border p-8 ${
+                  plan.highlighted
+                    ? "border-primary bg-primary/[0.02] shadow-lg shadow-primary/5"
+                    : "border-border/50"
+                }`}
+              >
+                {plan.highlighted && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold">{plan.name}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {plan.description}
+                  </p>
                 </div>
-                <div className="font-medium text-foreground mb-1">
-                  {stat.label}
+
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="text-muted-foreground ml-1">
+                    {plan.period}
+                  </span>
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.description}
-                </div>
+
+                <ul className="space-y-3 mb-8 flex-1">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  className="w-full"
+                  variant={plan.highlighted ? "default" : "outline"}
+                  asChild
+                >
+                  <a href="mailto:contact@nantano.ai">
+                    {plan.cta}
+                    {plan.highlighted && <ArrowRight className="ml-2 h-4 w-4" />}
+                  </a>
+                </Button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* API Cards */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch justify-items-center">
-            {apis.map((api, index) => {
-              const IconComponent = api.icon;
-              return (
-                <Card
-                  key={index}
-                  className="relative w-full h-full flex flex-col border border-border/50 bg-card hover:shadow-lg transition-all duration-300 group min-h-[600px]"
-                >
-                  {/* Status badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400">
-                      <div className="w-1.5 h-1.5 rounded-full mr-1.5 bg-green-500" />
-                      {api.status}
-                    </span>
-                  </div>
-
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <div className="flex-shrink-0">
-                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
-                          <IconComponent className="w-5 h-5 text-muted-foreground" />
-                        </div>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <CardTitle className="text-lg font-semibold leading-tight">
-                          {api.name}
-                        </CardTitle>
-                      </div>
-                    </div>
-                    <CardDescription className="text-sm text-muted-foreground line-clamp-2">
-                      {api.description}
-                    </CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="flex-1 flex flex-col">
-                    {/* Features */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-medium mb-3 text-foreground">
-                        What You Get
-                      </h4>
-                      <ul className="space-y-2">
-                        {api.features
-                          .slice(0, 4)
-                          .map((feature, featureIndex) => (
-                            <li
-                              key={featureIndex}
-                              className="flex items-start space-x-2 text-sm"
-                            >
-                              <CheckCircle className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                              <span className="text-muted-foreground leading-relaxed">
-                                {feature}
-                              </span>
-                            </li>
-                          ))}
-                        {api.features.length > 4 && (
-                          <li className="text-xs text-muted-foreground/70 pl-6">
-                            +{api.features.length - 4} more data points
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-
-                    {/* Pricing */}
-                    {api.pricing && (
-                      <div className="mb-6 flex-1">
-                        <h4 className="text-sm font-medium mb-3 text-foreground">
-                          Pricing
-                        </h4>
-                        <div className="space-y-2">
-                          {api.pricing.slice(0, 3).map((tier, i) => (
-                            <div
-                              key={i}
-                              className="flex items-center justify-between p-3 rounded-lg bg-muted/50 border border-border/50"
-                            >
-                              <div className="flex flex-col">
-                                <span className="text-sm font-medium text-foreground">
-                                  {tier.plan}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {tier.limit}
-                                </span>
-                              </div>
-                              <div className="text-right">
-                                <div className="text-sm font-semibold text-foreground">
-                                  {tier.price}
-                                </div>
-                                {tier.price !== "Free" &&
-                                  tier.price !== "$0.00" && (
-                                    <div className="text-xs text-muted-foreground">
-                                      /month
-                                    </div>
-                                  )}
-                              </div>
-                            </div>
-                          ))}
-                          {api.pricing.length > 3 && (
-                            <div className="text-xs text-muted-foreground/70 text-center py-1">
-                              +{api.pricing.length - 3} more plans available
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* CTA Button */}
-                    <div className="mt-auto pt-4">
-                      <Button asChild className="w-full" size="sm">
-                        <a
-                          href={api.rapidApiUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center"
-                        >
-                          Subscribe on RapidAPI
-                          <ExternalLink className="ml-2 h-4 w-4" />
-                        </a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+      {/* Book Demo CTA */}
+      <section className="py-20 bg-muted/20">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">
+            Not sure which plan fits?
+          </h2>
+          <p className="text-muted-foreground mb-8">
+            Book a demo and we&apos;ll walk you through how Nantano AI can help
+            your team find process issues before they escalate.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild>
+              <a href="mailto:contact@nantano.ai">
+                Book a Demo
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/process-mining">Learn How It Works</Link>
+            </Button>
           </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-24 bg-muted/30">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Everything about our AI-powered data APIs
-            </p>
-          </div>
-
-          <div className="grid gap-8">
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-lg">
-                  How is the data extracted?
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  We use AI process mining — our machine learning agents crawl
-                  data sources, understand their structure, extract relevant
-                  information, and normalize it into clean datasets. The pipeline
-                  runs continuously to keep data fresh.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-lg">
-                  Can I test before subscribing?
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Yes — every API has a free tier so you can test endpoints and
-                  validate the data fits your use case before upgrading to a paid plan.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-lg">
-                  Can you build a custom API for my use case?
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Absolutely. If you need structured data from a source we
-                  haven&apos;t covered yet, reach out at contact@nantano.ai.
-                  We evaluate new data sources and can spin up custom API
-                  products for enterprise clients.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-lg">
-                  Are these APIs production-ready?
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Yes — all our APIs are running in production today:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>120,000+ total API calls</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>200+ paying customers</span>
-                    </li>
-                  </ul>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>99.9% uptime SLA</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Hosted on scalable infrastructure</span>
-                    </li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <Card className="border-border/50">
-            <CardContent className="p-12">
-              <h2 className="text-3xl font-bold mb-4">Ready to build?</h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Stop maintaining scrapers. Subscribe to our AI-mined APIs and
-                get structured data in minutes. Free tiers on everything.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <a
-                    href="https://rapidapi.com/user/matepapava123"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Browse All APIs
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="mailto:contact@nantano.ai">Request Custom API</a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
     </div>

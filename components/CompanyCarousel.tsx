@@ -20,22 +20,6 @@ const partners = [
     ),
   },
   {
-    name: "MongoDB",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
-        <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0 1 11.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z" />
-      </svg>
-    ),
-  },
-  {
-    name: "RapidAPI",
-    svg: (
-      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
-        <path d="M12 0C5.375 0 0 5.375 0 12s5.375 12 12 12 12-5.375 12-12S18.625 0 12 0zm-.624 17.897h-2.07v-5.46H7.152v-1.79h2.154V9.122c0-2.108 1.278-3.268 3.152-3.268.9 0 1.674.067 1.898.097v2.21h-1.3c-1.02 0-1.218.486-1.218 1.198v1.288h2.436l-.318 1.79h-2.118v5.46h-.462z" />
-      </svg>
-    ),
-  },
-  {
     name: "OpenAI",
     svg: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
@@ -44,18 +28,26 @@ const partners = [
     ),
   },
   {
-    name: "Vercel",
+    name: "MongoDB",
     svg: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-        <path d="M24 22.525H0l12-21.05 12 21.05z" />
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
+        <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0 1 11.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z" />
       </svg>
     ),
   },
   {
-    name: "Python",
+    name: "Docker",
     svg: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
-        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" />
+        <path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.185-.186H5.136a.186.186 0 0 0-.186.185v1.888c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.687 11.687 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Vercel",
+    svg: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+        <path d="M24 22.525H0l12-21.05 12 21.05z" />
       </svg>
     ),
   },
@@ -69,31 +61,18 @@ const partners = [
   },
 ];
 
-const techStack = [
-  { name: "Machine Learning", description: "Custom models for data extraction" },
-  { name: "Natural Language Processing", description: "Understanding unstructured content" },
-  { name: "Distributed Computing", description: "Parallel processing at scale" },
-  { name: "Real-time Pipelines", description: "Always-fresh data delivery" },
-];
-
 export function CompanyCarousel() {
   return (
-    <section className="py-20 bg-muted/20 overflow-hidden">
+    <section className="py-16 bg-muted/20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-14">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-            Our Tech Stack & Partners
-          </p>
-          <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Built on world-class infrastructure
-          </h3>
-          <p className="mt-4 text-muted-foreground">
-            We leverage the best AI and cloud tools to mine, process, and serve data at scale.
+        <div className="mx-auto max-w-2xl text-center mb-12">
+          <p className="text-sm text-muted-foreground">
+            Powered by industry-leading infrastructure
           </p>
         </div>
 
-        {/* Infinite scrolling logos - row 1 */}
-        <div className="relative mb-6">
+        {/* Single row infinite scrolling logos */}
+        <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/20 to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/20 to-transparent z-10 pointer-events-none" />
           <div className="flex animate-scroll-left">
@@ -111,46 +90,6 @@ export function CompanyCarousel() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Infinite scrolling logos - row 2 (reverse) */}
-        <div className="relative mb-16">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/20 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/20 to-transparent z-10 pointer-events-none" />
-          <div className="flex animate-scroll-right">
-            {[...partners, ...partners].reverse().map((partner, index) => (
-              <div
-                key={`rev-${partner.name}-${index}`}
-                className="flex-none mx-6"
-              >
-                <div className="flex items-center gap-3 rounded-full border border-border/50 bg-background/80 backdrop-blur-sm px-5 py-3 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-                  <span className="text-foreground/70">{partner.svg}</span>
-                  <span className="font-medium text-sm whitespace-nowrap">
-                    {partner.name}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Tech capability cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {techStack.map((tech) => (
-            <div
-              key={tech.name}
-              className="group relative rounded-xl border border-border/50 bg-background/60 backdrop-blur-sm p-5 hover:border-primary/40 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative">
-                <div className="h-2 w-2 rounded-full bg-primary mb-3" />
-                <h4 className="font-semibold text-sm mb-1">{tech.name}</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {tech.description}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

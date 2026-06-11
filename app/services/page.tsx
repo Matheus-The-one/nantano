@@ -21,16 +21,16 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "API Services | Nike, Cookpad, Doctors, Investors Leads APIs on RapidAPI",
+    "API Services | Nike, Cookpad, Doctors, Investors Leads APIs ",
   description:
-    "Browse all our APIs on RapidAPI: Nike API, Cookpad API, Doctors API, Investors Leads API, AI Image Generation, Background Removal, and more. Access comprehensive data APIs for your applications.",
+    "Browse all our APIs : Nike API, Cookpad API, Doctors API, Investors Leads API, AI Image Generation, Background Removal, and more. Access comprehensive data APIs for your applications.",
   keywords:
     "api services, nike api, cookpad api, doctors api, investors leads api, rapidapi, ai image generation api, background removal api, api marketplace, developer apis, rapidapi apis, api directory, api catalog",
   openGraph: {
     title:
-      "API Services | Nike, Cookpad, Doctors, Investors Leads APIs on RapidAPI",
+      "API Services | Nike, Cookpad, Doctors, Investors Leads APIs ",
     description:
-      "Browse all our APIs on RapidAPI. Access Nike products, Cookpad recipes, doctors database, investors leads, and more.",
+      "Browse all our APIs . Access Nike products, Cookpad recipes, doctors database, investors leads, and more.",
     type: "website",
     url: "https://nantano.ai/services",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "API Services | Nike, Cookpad, Doctors, Investors Leads APIs",
     description:
-      "Browse all our APIs on RapidAPI. Access comprehensive data APIs for your applications.",
+      "Browse all our APIs . Access comprehensive data APIs for your applications.",
   },
   alternates: {
     canonical: "https://nantano.ai/services",
@@ -138,7 +138,7 @@ export default function ServicesPage() {
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
               Explore our comprehensive collection of APIs available on
-              RapidAPI. From Nike products to investor leads, recipes to doctors
+              From Nike products to investor leads, recipes to doctors
               - we have the data you need.
             </p>
           </div>
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View on RapidAPI
+                        View 
                       </a>
                     </Button>
                   </div>
@@ -244,7 +244,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Join 100+ developers building amazing applications with our APIs
-              on RapidAPI
+              
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button size="lg" asChild>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Browse on RapidAPI
+                  Browse 
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -271,7 +271,7 @@ export default function ServicesPage() {
             "@type": "CollectionPage",
             name: "Nantano AI Services",
             description:
-              "Browse all our APIs on RapidAPI including Nike API, Cookpad API, Doctors API, and Investors Leads API",
+              "Browse all our APIs  including Nike API, Cookpad API, Doctors API, and Investors Leads API",
             provider: {
               "@type": "Organization",
               name: "Nantano AI",

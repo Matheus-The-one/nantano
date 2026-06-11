@@ -63,7 +63,7 @@ export default function BackgroundRemovalPage() {
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
               Remove backgrounds from images instantly with AI-powered
-              precision. Live on RapidAPI with 20,000+ calls and 100+ paying
+              precision. Live  with 20,000+ calls and 100+ paying
               customers. Perfect for e-commerce, social media, and professional
               photography.
             </p>
@@ -75,7 +75,7 @@ export default function BackgroundRemovalPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Try on RapidAPI
+                  Try 
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
