@@ -86,7 +86,7 @@ export default function RootLayout({
                   className="flex-shrink-0 font-bold text-xl hover:text-primary transition-colors flex items-center gap-2"
                 >
                   <Logo className="w-10 h-7 text-primary" />
-                  NANTANO AI
+                  Nantano AI
                 </Link>
 
                 {/* Desktop Navigation */}
