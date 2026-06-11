@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description:
       "Browse all our APIs on RapidAPI. Access Nike products, Cookpad recipes, doctors database, investors leads, and more.",
     type: "website",
-    url: "https://nantano.studio/services",
+    url: "https://nantano.ai/services",
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Browse all our APIs on RapidAPI. Access comprehensive data APIs for your applications.",
   },
   alternates: {
-    canonical: "https://nantano.studio/services",
+    canonical: "https://nantano.ai/services",
   },
 };
 
@@ -206,7 +206,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Why Choose Nantano Studios?
+              Why Choose Nantano AIs?
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Trusted by 100+ paying customers with 20,000+ API calls per
@@ -269,13 +269,13 @@ export default function ServicesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Nantano Studio Services",
+            name: "Nantano AI Services",
             description:
               "Browse all our APIs on RapidAPI including Nike API, Cookpad API, Doctors API, and Investors Leads API",
             provider: {
               "@type": "Organization",
-              name: "Nantano Studio",
-              url: "https://nantano.studio",
+              name: "Nantano AI",
+              url: "https://nantano.ai",
             },
             mainEntity: {
               "@type": "ItemList",
@@ -286,7 +286,7 @@ export default function ServicesPage() {
                   "@type": "SoftwareApplication",
                   name: service.title,
                   description: service.description,
-                  url: `https://nantano.studio${service.pageUrl}`,
+                  url: `https://nantano.ai${service.pageUrl}`,
                   applicationCategory: "DeveloperApplication",
                 },
               })),

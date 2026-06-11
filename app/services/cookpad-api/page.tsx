@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description:
       "Access Cookpad recipes, cooking instructions, ingredients, and food data. Perfect for recipe apps, food platforms, and cooking applications.",
     type: "website",
-    url: "https://nantano.studio/services/cookpad-api",
+    url: "https://nantano.ai/services/cookpad-api",
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Access Cookpad recipes, cooking instructions, ingredients, and food data.",
   },
   alternates: {
-    canonical: "https://nantano.studio/services/cookpad-api",
+    canonical: "https://nantano.ai/services/cookpad-api",
   },
 };
 
@@ -383,8 +383,8 @@ console.log(recipe.instructions);`}
             },
             provider: {
               "@type": "Organization",
-              name: "Nantano Studio",
-              url: "https://nantano.studio",
+              name: "Nantano AI",
+              url: "https://nantano.ai",
             },
           }),
         }}

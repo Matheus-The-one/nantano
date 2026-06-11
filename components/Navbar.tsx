@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { useState } from "react";
 import Link from "next/link";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -14,7 +13,7 @@ import {
 
 const navLinks = [
   { name: "How It Works", href: "#how-it-works" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "APIs & Pricing", href: "/pricing" },
 ];
 
 export function Navbar() {
@@ -51,8 +50,8 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link href="mailto:contact@nantano.studio" className="text-lg font-semibold text-primary">
-                Get Early Access
+              <Link href="mailto:contact@nantano.ai" className="text-lg font-semibold text-primary">
+                Contact Us
               </Link>
             </nav>
           </SheetContent>

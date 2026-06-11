@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react";
 
-const audiences = [
-  { name: "SaaS Companies", logo: "SC" },
+const industries = [
+  { name: "Entertainment", logo: "EN" },
+  { name: "Healthcare", logo: "HC" },
   { name: "E-Commerce", logo: "EC" },
-  { name: "B2B Brands", logo: "B2" },
-  { name: "Content Sites", logo: "CS" },
-  { name: "Marketplaces", logo: "MP" },
-  { name: "Agencies", logo: "AG" },
-  { name: "Startups", logo: "ST" },
-  { name: "Enterprise", logo: "EN" },
-  { name: "Personal Brands", logo: "PB" },
-  { name: "Local Business", logo: "LB" },
+  { name: "Food & Recipes", logo: "FR" },
+  { name: "Finance", logo: "FN" },
+  { name: "Investor Data", logo: "ID" },
+  { name: "Retail", logo: "RT" },
+  { name: "Sports", logo: "SP" },
+  { name: "Real Estate", logo: "RE" },
+  { name: "Travel", logo: "TR" },
 ];
 
 export function CompanyCarousel() {
@@ -20,7 +20,7 @@ export function CompanyCarousel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % audiences.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % industries.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -31,7 +31,7 @@ export function CompanyCarousel() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <p className="text-sm text-muted-foreground mb-8">
-            Helping brands get discovered by AI — across every industry
+            We extract and structure data across industries — then ship it as APIs
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export function CompanyCarousel() {
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${(currentIndex * 100) / 5}%)` }}
           >
-            {[...audiences, ...audiences].map((item, index) => (
+            {[...industries, ...industries].map((item, index) => (
               <div
                 key={`${item.name}-${index}`}
                 className="flex-none w-1/5 px-8"
@@ -61,7 +61,7 @@ export function CompanyCarousel() {
         </div>
 
         <div className="md:hidden grid grid-cols-2 gap-6">
-          {audiences.slice(0, 6).map((item) => (
+          {industries.slice(0, 6).map((item) => (
             <div
               key={item.name}
               className="flex items-center justify-center"
@@ -77,7 +77,7 @@ export function CompanyCarousel() {
         </div>
 
         <div className="hidden md:flex justify-center mt-8 space-x-2">
-          {audiences.map((_, index) => (
+          {industries.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

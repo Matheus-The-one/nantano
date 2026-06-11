@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://nantano.studio";
+  const baseUrl = "https://nantano.ai";
 
   return {
     rules: [

@@ -1,36 +1,36 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, Bot, BarChart3, Repeat } from "lucide-react";
+import { Search, Cpu, Code2, Rocket } from "lucide-react";
 
 const steps = [
   {
     step: "01",
     icon: Search,
-    title: "Audit Your AI Presence",
+    title: "Identify Data Sources",
     description:
-      "We test how ChatGPT, Claude, Gemini, and Perplexity currently perceive your brand. Where are you mentioned? Where are you missing? What do they get wrong?",
+      "We find high-value, unstructured data on the web — movie databases, healthcare directories, product catalogs, financial datasets — places where structured access doesn't exist yet.",
   },
   {
     step: "02",
-    icon: Bot,
-    title: "Deploy AI Agents",
+    icon: Cpu,
+    title: "AI Process Mining",
     description:
-      "Our agentic system restructures your content, metadata, and domain signals based on what LLMs actually prioritize when generating answers.",
+      "Our AI agents reverse-engineer how data is organized, detect patterns, handle edge cases, and build extraction models that adapt as sources change.",
   },
   {
     step: "03",
-    icon: Repeat,
-    title: "Continuous Optimization",
+    icon: Code2,
+    title: "Build the API",
     description:
-      "Agents run 24/7. They monitor LLM outputs, track ranking changes, test new structures, and adapt as AI models evolve. You never fall behind.",
+      "Extracted data is cleaned, normalized, and served through fast REST APIs with documentation, versioning, rate limiting, and monitoring baked in.",
   },
   {
     step: "04",
-    icon: BarChart3,
-    title: "Measure & Report",
+    icon: Rocket,
+    title: "Ship & Scale",
     description:
-      "See exactly how your AI visibility grows week over week. Track citations, recommendations, and competitive positioning across all major LLMs.",
+      "APIs go live on RapidAPI with flexible pricing tiers. Developers subscribe, integrate in minutes, and we keep the data pipeline running 24/7.",
   },
 ];
 
@@ -40,11 +40,11 @@ export function CodeShowcase() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            How it works
+            How we build API products
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            From zero AI presence to being recommended by every major LLM.
-            Here&apos;s our process.
+            From unstructured web data to production-ready APIs — our AI-driven
+            pipeline does the work.
           </p>
         </div>
 

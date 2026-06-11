@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Access Nike products, inventory, pricing, and e-commerce data through our comprehensive Nike API. Perfect for price comparison, inventory management, and product analysis.",
     type: "website",
-    url: "https://nantano.studio/services/nike-api",
+    url: "https://nantano.ai/services/nike-api",
   },
   twitter: {
     card: "summary_large_image",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "Access Nike products, inventory, pricing, and e-commerce data through our comprehensive Nike API.",
   },
   alternates: {
-    canonical: "https://nantano.studio/services/nike-api",
+    canonical: "https://nantano.ai/services/nike-api",
   },
 };
 
@@ -380,8 +380,8 @@ console.log(product);`}
             },
             provider: {
               "@type": "Organization",
-              name: "Nantano Studio",
-              url: "https://nantano.studio",
+              name: "Nantano AI",
+              url: "https://nantano.ai",
             },
           }),
         }}

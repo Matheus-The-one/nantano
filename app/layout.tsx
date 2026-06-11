@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { ModeToggle } from "@/components/ui/themwitcher";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,29 +20,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nantano Studio - Agentic AI for LLM SEO",
+  title: "Nantano AI — AI-Powered Data APIs & Process Mining",
   description:
-    "We use agentic AI to optimize your brand for discovery by ChatGPT, Claude, Gemini, and every LLM that matters. Get found by AI, not just Google.",
+    "We mine the web with AI, extract structured data, and ship production-ready APIs as a service. Process mining meets SaaS — data products built by machines, consumed by developers.",
   keywords:
-    "llm seo, ai seo, agentic ai, chatgpt optimization, ai discovery, llm optimization, ai brand visibility, nantano studio",
+    "ai api, process mining, data extraction, ai saas, web scraping api, structured data api, ai startup studio, nantano studio",
   openGraph: {
-    title: "Nantano Studio - Agentic AI for LLM SEO",
+    title: "Nantano AI — AI-Powered Data APIs & Process Mining",
     description:
-      "We use agentic AI to optimize your brand for discovery by ChatGPT, Claude, Gemini, and every LLM that matters.",
+      "We mine the web with AI, extract structured data, and ship production-ready APIs. Process mining meets SaaS.",
     type: "website",
-    url: "https://nantano.studio",
-    siteName: "Nantano Studio",
+    url: "https://nantano.ai",
+    siteName: "Nantano AI",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nantano Studio - Agentic AI for LLM SEO",
+    title: "Nantano AI — AI-Powered Data APIs & Process Mining",
     description:
-      "Get your brand discovered by AI. Our agents optimize your content for LLMs 24/7.",
+      "AI mines the data. We ship the APIs. Developers build with them.",
   },
   alternates: {
-    canonical: "https://nantano.studio",
+    canonical: "https://nantano.ai",
   },
-  metadataBase: new URL("https://nantano.studio"),
+  metadataBase: new URL("https://nantano.ai"),
 };
 
 export default function RootLayout({
@@ -84,13 +85,8 @@ export default function RootLayout({
                   href="/"
                   className="flex-shrink-0 font-bold text-xl hover:text-primary transition-colors flex items-center gap-2"
                 >
-                  <svg viewBox="0 0 36 36" className="w-9 h-9 text-primary" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="18 3 31 10.5 31 25.5 18 33 5 25.5 5 10.5" />
-                    <path d="M11 12V24" />
-                    <path d="M25 12V24" />
-                    <path d="M11 12L25 24" />
-                  </svg>
-                  NANTANO STUDIO
+                  <Logo className="w-8 h-8" />
+                  NANTANO AI
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -99,7 +95,7 @@ export default function RootLayout({
                   <div className="flex items-center gap-3">
                     <ModeToggle />
                     <Button asChild size="sm">
-                      <a href="mailto:contact@nantano.studio">Get in Touch</a>
+                      <a href="mailto:contact@nantano.ai">Contact Us</a>
                     </Button>
                   </div>
                 </div>

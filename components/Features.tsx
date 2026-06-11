@@ -7,44 +7,44 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Bot, Search, Globe, Brain, RefreshCw, BarChart3 } from "lucide-react";
+import { Cpu, Database, Workflow, Globe, Layers, Rocket } from "lucide-react";
 
 const features = [
   {
-    icon: Bot,
-    title: "Autonomous AI Agents",
+    icon: Cpu,
+    title: "AI Process Mining",
     description:
-      "Our agents crawl, analyze, and restructure your content around the clock — no manual intervention needed.",
+      "Our AI agents crawl, analyze, and understand complex data sources — extracting structured information from unstructured web pages at scale.",
   },
   {
-    icon: Search,
-    title: "LLM Discovery Optimization",
+    icon: Database,
+    title: "Structured Data Extraction",
     description:
-      "We optimize how ChatGPT, Claude, Perplexity, and other AI models find, understand, and recommend your brand.",
+      "Raw web data is transformed into clean, normalized, and validated datasets ready for consumption through RESTful endpoints.",
   },
   {
-    icon: Brain,
-    title: "Semantic Structuring",
+    icon: Workflow,
+    title: "Automated Pipelines",
     description:
-      "Automatically restructure your content with schema, metadata, and semantic signals that LLMs prioritize.",
+      "End-to-end automation from discovery to delivery. Our pipelines run 24/7 keeping data fresh without manual intervention.",
   },
   {
     icon: Globe,
-    title: "Domain Authority for AI",
+    title: "Production-Ready APIs",
     description:
-      "Build domain-level trust signals that make LLMs consistently reference and recommend your brand.",
+      "Every dataset ships as a fast, documented API on RapidAPI. Subscribe, integrate, and build — no scraping infrastructure needed.",
   },
   {
-    icon: RefreshCw,
-    title: "Continuous Optimization",
+    icon: Layers,
+    title: "Multi-Domain Coverage",
     description:
-      "LLM ranking factors change weekly. Our agents adapt in real-time so you never fall behind.",
+      "Entertainment, healthcare, e-commerce, finance, food — we mine and serve structured data across industries.",
   },
   {
-    icon: BarChart3,
-    title: "AI Visibility Analytics",
+    icon: Rocket,
+    title: "SaaS-Grade Reliability",
     description:
-      "Track exactly how often LLMs cite your brand, what queries trigger mentions, and where you rank vs. competitors.",
+      "99.9% uptime, rate limiting, versioning, and real-time monitoring. Built for production workloads from day one.",
   },
 ];
 
@@ -54,11 +54,11 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            What our AI agents do for you
+            What we build
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Think of us as your always-on SEO team — but for the AI landscape.
-            We make sure LLMs know who you are and recommend you.
+            We use AI to mine data from complex sources and turn it into
+            developer-ready API products — the full pipeline, automated.
           </p>
         </div>
 

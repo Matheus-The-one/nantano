@@ -5,20 +5,16 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
 import {
   CheckCircle,
-  ArrowRight,
   ExternalLink,
-  Zap,
-  TrendingUp,
-  Users,
   Crown,
   Coffee,
   Activity,
   DollarSign,
   ShoppingCart,
+  Cpu,
 } from "lucide-react";
 import Script from "next/script";
 
@@ -29,24 +25,12 @@ type PricingTier = {
   note?: string;
 };
 
-type API = {
-  name: string;
-  description: string;
-  rapidApiUrl: string;
-  features: string[];
-  status: "Live" | "Coming Soon";
-  icon: any; // Using 'any' for Lucide icons
-  gradient: string;
-  pricing?: PricingTier[];
-  endpoints?: string[];
-};
-
 export const metadata = {
-  title: "API Pricing - NANTANO | Rotten Tomatoes API & More",
+  title: "AI-Powered APIs & Pricing — Nantano AI",
   description:
-    "Explore our flexible API pricing plans including the Rotten Tomatoes API for movie data, ratings and reviews. Free tiers available for all APIs.",
+    "Explore our AI-mined data APIs: movies, recipes, healthcare, investors, and e-commerce. Free tiers available. Subscribe on RapidAPI and start building.",
   keywords:
-    "Rotten Tomatoes API, movie API, API pricing, free API, movie ratings API, movie reviews API",
+    "ai api, data api, movie api, recipe api, healthcare api, investor api, process mining api, nantano studio",
 };
 
 export default function PricingPage() {
@@ -54,7 +38,7 @@ export default function PricingPage() {
     {
       name: "Rotten Tomato API",
       description:
-        "Access comprehensive movie data, ratings, and reviews from the trusted Rotten Tomatoes platform",
+        "AI-mined movie ratings, reviews, box office data, and streaming availability — structured and ready to query",
       rapidApiUrl: "https://rapidapi.com/matepapava123/api/rottentomato",
       features: [
         "Movie ratings & reviews",
@@ -64,7 +48,7 @@ export default function PricingPage() {
         "Critics scores & reviews",
         "Movie posters & spoilers",
       ],
-      status: "Live",
+      status: "Live" as const,
       icon: Crown,
       gradient: "from-orange-500/10 to-red-500/10",
       pricing: [
@@ -73,12 +57,6 @@ export default function PricingPage() {
           price: "$0.00",
           limit: "5 requests/month",
           note: "Hard Limit",
-        },
-        {
-          plan: "Basic",
-          price: "$0.00",
-          limit: "500,000 requests/month",
-          note: "Hard Limit (Deprecated)",
         },
         {
           plan: "Pro",
@@ -93,11 +71,11 @@ export default function PricingPage() {
           note: "+$0.05 per additional",
         },
       ],
-      // endpoints removed for consistent card layout
     },
     {
       name: "Cookpad API",
-      description: "Access comprehensive recipe and cooking data",
+      description:
+        "AI-extracted recipe data, nutritional info, and cooking metadata from one of the world's largest recipe platforms",
       rapidApiUrl: "https://rapidapi.com/matepapava123/api/cookpad-api",
       features: [
         "Extensive recipe database",
@@ -107,7 +85,7 @@ export default function PricingPage() {
         "User ratings and reviews",
         "Cooking time estimates",
       ],
-      status: "Live",
+      status: "Live" as const,
       icon: Coffee,
       gradient: "from-green-500/10 to-yellow-500/10",
       pricing: [
@@ -133,7 +111,8 @@ export default function PricingPage() {
     },
     {
       name: "Doctors API",
-      description: "Access healthcare provider data and information",
+      description:
+        "Healthcare provider directory mined with AI — specialties, locations, credentials, and availability in one endpoint",
       rapidApiUrl:
         "https://rapidapi.com/matepapava123/api/doctors-api",
       features: [
@@ -144,7 +123,7 @@ export default function PricingPage() {
         "Patient reviews",
         "Appointment availability",
       ],
-      status: "Live",
+      status: "Live" as const,
       icon: Activity,
       gradient: "from-blue-500/10 to-cyan-500/10",
       pricing: [
@@ -169,14 +148,15 @@ export default function PricingPage() {
         {
           plan: "Mega",
           price: "$45.00",
-          limit: "500000 calls/month",
+          limit: "500,000 calls/month",
           note: "No extra charges",
         },
       ],
     },
     {
       name: "Investors Leads API",
-      description: "Connect with qualified investment opportunities",
+      description:
+        "AI-aggregated investor data — contacts, preferences, portfolio history, and deal flow intelligence",
       rapidApiUrl: "https://rapidapi.com/matepapava123/api/investors-leads-api",
       features: [
         "Qualified investor contacts",
@@ -186,7 +166,7 @@ export default function PricingPage() {
         "Due diligence data",
         "Investment history",
       ],
-      status: "Live",
+      status: "Live" as const,
       icon: DollarSign,
       gradient: "from-indigo-500/10 to-violet-500/10",
       pricing: [
@@ -200,25 +180,26 @@ export default function PricingPage() {
           plan: "Pro",
           price: "$10/month",
           limit: "500 calls/month",
-          note: "hard limit",
+          note: "Hard limit",
         },
         {
           plan: "Ultra",
           price: "$49/month",
-          limit: "10000 calls/month",
-          note: "hard limit",
+          limit: "10,000 calls/month",
+          note: "Hard limit",
         },
         {
           plan: "Mega",
           price: "$199/month",
-          limit: "50000 calls/month",
-          note: "hard limit",
+          limit: "50,000 calls/month",
+          note: "Hard limit",
         },
       ],
     },
     {
       name: "Nike API",
-      description: "Access Nike product catalog and inventory data",
+      description:
+        "Real-time product catalog, inventory, pricing, and release data extracted from Nike's ecosystem via AI",
       rapidApiUrl: "https://rapidapi.com/matepapava123/api/nike-api",
       features: [
         "Product catalog access",
@@ -228,7 +209,7 @@ export default function PricingPage() {
         "Product specifications",
         "Regional availability",
       ],
-      status: "Live",
+      status: "Live" as const,
       icon: ShoppingCart,
       gradient: "from-gray-500/10 to-slate-500/10",
       pricing: [
@@ -271,25 +252,24 @@ export default function PricingPage() {
       value: "200+",
       description: "Production users",
     },
-    { label: "Live APIs", value: "5", description: "Ready to use" },
+    { label: "Live APIs", value: "5", description: "AI-mined data products" },
     { label: "Uptime", value: "99.9%", description: "Reliable service" },
   ];
 
-  // Create structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Rotten Tomatoes API",
+    name: "Nantano AI APIs",
     applicationCategory: "API",
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "USD",
       lowPrice: "0",
-      highPrice: "45",
-      offerCount: "4",
+      highPrice: "199",
+      offerCount: "5",
     },
     description:
-      "Access comprehensive movie data, ratings, and reviews from the trusted Rotten Tomatoes platform.",
+      "AI-powered data APIs built through process mining. Movies, recipes, healthcare, investors, and e-commerce data.",
   };
 
   return (
@@ -297,27 +277,29 @@ export default function PricingPage() {
       <Script id="structured-data" type="application/ld+json">
         {JSON.stringify(structuredData)}
       </Script>
+
       {/* Hero Section */}
       <section className="py-24 sm:py-32 relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex justify-center mb-8">
-              <div className="rounded-full bg-gray-100 dark:bg-gray-900 p-4">
-                <ExternalLink className="h-12 w-12 text-gray-800 dark:text-gray-200" />
+              <div className="rounded-full bg-primary/10 p-4">
+                <Cpu className="h-12 w-12 text-primary" />
               </div>
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Available on RapidAPI
+              AI-Mined Data APIs
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              All our APIs are live on RapidAPI with flexible pricing. Each API
-              has served 20,000+ calls with 100+ paying customers.
+              Every API below is built by our AI process mining pipeline —
+              extracting, structuring, and serving data that doesn&apos;t have
+              clean access anywhere else. Subscribe on RapidAPI and start building.
             </p>
 
             <div className="mt-8 inline-flex items-center rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-4 py-2 text-sm">
               <span className="text-muted-foreground">
-                5 Live APIs • Trusted by 200+ customers • 20K+ calls each
+                5 Live APIs &bull; Free tiers on all &bull; 200+ production customers
               </span>
             </div>
           </div>
@@ -358,18 +340,8 @@ export default function PricingPage() {
                 >
                   {/* Status badge */}
                   <div className="absolute top-4 right-4 z-10">
-                    <span
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                        api.status === "Live"
-                          ? "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
-                          : "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400"
-                      }`}
-                    >
-                      <div
-                        className={`w-1.5 h-1.5 rounded-full mr-1.5 ${
-                          api.status === "Live" ? "bg-green-500" : "bg-gray-500"
-                        }`}
-                      />
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400">
+                      <div className="w-1.5 h-1.5 rounded-full mr-1.5 bg-green-500" />
                       {api.status}
                     </span>
                   </div>
@@ -396,7 +368,7 @@ export default function PricingPage() {
                     {/* Features */}
                     <div className="mb-6">
                       <h4 className="text-sm font-medium mb-3 text-foreground">
-                        Key Features
+                        What You Get
                       </h4>
                       <ul className="space-y-2">
                         {api.features
@@ -414,7 +386,7 @@ export default function PricingPage() {
                           ))}
                         {api.features.length > 4 && (
                           <li className="text-xs text-muted-foreground/70 pl-6">
-                            +{api.features.length - 4} more features
+                            +{api.features.length - 4} more data points
                           </li>
                         )}
                       </ul>
@@ -424,7 +396,7 @@ export default function PricingPage() {
                     {api.pricing && (
                       <div className="mb-6 flex-1">
                         <h4 className="text-sm font-medium mb-3 text-foreground">
-                          Pricing Plans
+                          Pricing
                         </h4>
                         <div className="space-y-2">
                           {api.pricing.slice(0, 3).map((tier, i) => (
@@ -462,30 +434,19 @@ export default function PricingPage() {
                       </div>
                     )}
 
-                    {/* CTA Button - Always at bottom */}
+                    {/* CTA Button */}
                     <div className="mt-auto pt-4">
-                      {api.status === "Live" ? (
-                        <Button asChild className="w-full" size="sm">
-                          <a
-                            href={api.rapidApiUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center"
-                          >
-                            View on RapidAPI
-                            <ExternalLink className="ml-2 h-4 w-4" />
-                          </a>
-                        </Button>
-                      ) : (
-                        <Button
-                          className="w-full"
-                          variant="secondary"
-                          size="sm"
-                          disabled
+                      <Button asChild className="w-full" size="sm">
+                        <a
+                          href={api.rapidApiUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center"
                         >
-                          Coming Soon
-                        </Button>
-                      )}
+                          Subscribe on RapidAPI
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -503,7 +464,7 @@ export default function PricingPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-muted-foreground">
-              Everything you need to know about our APIs on RapidAPI
+              Everything about our AI-powered data APIs
             </p>
           </div>
 
@@ -511,15 +472,15 @@ export default function PricingPage() {
             <Card className="border-border/50">
               <CardHeader>
                 <CardTitle className="text-lg">
-                  How does pricing work on RapidAPI?
+                  How is the data extracted?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Each API has its own pricing model on RapidAPI. Most offer
-                  free tiers and flexible pay-per-use pricing. You only pay for
-                  what you use, with transparent pricing displayed on each API's
-                  RapidAPI page.
+                  We use AI process mining — our machine learning agents crawl
+                  data sources, understand their structure, extract relevant
+                  information, and normalize it into clean datasets. The pipeline
+                  runs continuously to keep data fresh.
                 </p>
               </CardContent>
             </Card>
@@ -527,14 +488,13 @@ export default function PricingPage() {
             <Card className="border-border/50">
               <CardHeader>
                 <CardTitle className="text-lg">
-                  Can I test the APIs before subscribing?
+                  Can I test before subscribing?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Yes! Most of our APIs offer free tiers or trial credits so you
-                  can test functionality before committing. Check each API's
-                  RapidAPI page for specific free tier details.
+                  Yes — every API has a free tier so you can test endpoints and
+                  validate the data fits your use case before upgrading to a paid plan.
                 </p>
               </CardContent>
             </Card>
@@ -542,15 +502,15 @@ export default function PricingPage() {
             <Card className="border-border/50">
               <CardHeader>
                 <CardTitle className="text-lg">
-                  What support is available?
+                  Can you build a custom API for my use case?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We provide comprehensive documentation and support through
-                  RapidAPI's platform, plus direct email support at
-                  contact@nantano.studio for complex technical issues or business
-                  inquiries.
+                  Absolutely. If you need structured data from a source we
+                  haven&apos;t covered yet, reach out at contact@nantano.ai.
+                  We evaluate new data sources and can spin up custom API
+                  products for enterprise clients.
                 </p>
               </CardContent>
             </Card>
@@ -558,32 +518,32 @@ export default function PricingPage() {
             <Card className="border-border/50">
               <CardHeader>
                 <CardTitle className="text-lg">
-                  Are the APIs reliable for production use?
+                  Are these APIs production-ready?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Absolutely! Our APIs have proven reliability with:
+                  Yes — all our APIs are running in production today:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-gray-500" />
-                      <span>20,000+ API calls per endpoint</span>
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>120,000+ total API calls</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-gray-500" />
+                      <CheckCircle className="h-4 w-4 text-primary" />
                       <span>200+ paying customers</span>
                     </li>
                   </ul>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-gray-500" />
-                      <span>99.9% uptime</span>
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>99.9% uptime SLA</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-gray-500" />
-                      <span>Production-ready infrastructure</span>
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>Hosted on scalable infrastructure</span>
                     </li>
                   </ul>
                 </div>
@@ -598,24 +558,24 @@ export default function PricingPage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <Card className="border-border/50">
             <CardContent className="p-12">
-              <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to build?</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Join 200+ developers already using our APIs in production. Start
-                with our free tiers and scale as you grow.
+                Stop maintaining scrapers. Subscribe to our AI-mined APIs and
+                get structured data in minutes. Free tiers on everything.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
                   <a
-                    href="https://rapidapi.com"
+                    href="https://rapidapi.com/user/matepapava123"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Browse APIs on RapidAPI
+                    Browse All APIs
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <a href="mailto:contact@nantano.studio">Contact Sales</a>
+                  <a href="mailto:contact@nantano.ai">Request Custom API</a>
                 </Button>
               </div>
             </CardContent>

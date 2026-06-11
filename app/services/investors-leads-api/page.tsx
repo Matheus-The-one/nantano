@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Access investor contact emails, business leads, funding data, and investment opportunities. Perfect for startups, fundraising platforms, and business development.",
     type: "website",
-    url: "https://nantano.studio/services/investors-leads-api",
+    url: "https://nantano.ai/services/investors-leads-api",
   },
   twitter: {
     card: "summary_large_image",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Access investor contact emails, business leads, funding data, and investment opportunities.",
   },
   alternates: {
-    canonical: "https://nantano.studio/services/investors-leads-api",
+    canonical: "https://nantano.ai/services/investors-leads-api",
   },
 };
 
@@ -388,8 +388,8 @@ console.log(investor.contact_email);`}
             },
             provider: {
               "@type": "Organization",
-              name: "Nantano Studio",
-              url: "https://nantano.studio",
+              name: "Nantano AI",
+              url: "https://nantano.ai",
             },
           }),
         }}

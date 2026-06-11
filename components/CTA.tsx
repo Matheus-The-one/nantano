@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export function CTA() {
   return (
@@ -14,20 +15,20 @@ export function CTA() {
             </div>
 
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Ready to be found by AI?
+              Need structured data? We probably have an API for that.
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              The brands that optimize for LLMs now will dominate the next decade.
-              Let our agentic AI put you ahead of everyone else.
+              Stop building scrapers. Subscribe to our AI-mined data APIs and
+              ship your product faster. Free tiers available on every endpoint.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <a href="mailto:contact@nantano.studio">
-                  Get Early Access
+                <Link href="/pricing">
+                  Browse Our APIs
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                </Link>
               </Button>
 
               <Button
@@ -36,12 +37,12 @@ export function CTA() {
                 className="w-full sm:w-auto"
                 asChild
               >
-                <a href="mailto:contact@nantano.studio">Book a Demo</a>
+                <a href="mailto:contact@nantano.ai">Request a Custom API</a>
               </Button>
             </div>
 
             <div className="mt-8 text-sm text-muted-foreground">
-              Limited spots — We onboard 5 new brands per month
+              5 live APIs &bull; 200+ customers &bull; Free tiers on all products
             </div>
           </div>
         </div>
