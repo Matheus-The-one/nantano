@@ -47,7 +47,7 @@ export default function AIImageGenerationPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex justify-center mb-6">
               <div className="rounded-full bg-primary/10 p-4">
@@ -87,7 +87,7 @@ export default function AIImageGenerationPage() {
 
       {/* Features Section */}
       <section className="py-24 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Powerful Features
@@ -119,7 +119,7 @@ export default function AIImageGenerationPage() {
 
       {/* Code Example Section */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Simple Integration
@@ -168,7 +168,7 @@ console.log(data.image_url);`}
 
       {/* Use Cases Section */}
       <section className="py-24 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Perfect For
@@ -194,7 +194,7 @@ console.log(data.image_url);`}
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <div className="rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 p-12 shadow-lg border border-border/50">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">

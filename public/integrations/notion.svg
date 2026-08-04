@@ -1,0 +1,8 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- page background -->
+  <rect x="6" y="4" width="24" height="32" rx="3" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- folded corner -->
+  <path d="M24 4 L30 10 L24 10 Z" fill="#e5e7eb"/>
+  <!-- N letterform -->
+  <path d="M12 27 L12 13 L22 27 L22 13" stroke="#191919" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

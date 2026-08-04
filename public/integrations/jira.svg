@@ -1,0 +1,20 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jira-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2684FF"/>
+      <stop offset="100%" stop-color="#0052CC"/>
+    </linearGradient>
+    <linearGradient id="jira-g2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2684FF"/>
+      <stop offset="100%" stop-color="#0052CC"/>
+    </linearGradient>
+  </defs>
+  <!-- top-right chevron -->
+  <path d="M20 5 L35 20 L20 20 Z" fill="url(#jira-g)" opacity="0.9"/>
+  <!-- bottom-left chevron -->
+  <path d="M20 35 L5 20 L20 20 Z" fill="url(#jira-g2)" opacity="0.9"/>
+  <!-- center diamond -->
+  <path d="M20 8 L32 20 L20 32 L8 20 Z" fill="url(#jira-g)"/>
+  <!-- white J arrow -->
+  <path d="M17 16 L23 16 L23 24 Q23 27 20 27 Q17 27 17 24" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

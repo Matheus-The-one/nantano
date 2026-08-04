@@ -107,7 +107,7 @@ export default function CookpadApiPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex justify-center mb-6">
               <div className="rounded-full bg-primary/10 p-4">
@@ -162,7 +162,7 @@ export default function CookpadApiPage() {
 
       {/* Features Section */}
       <section className="py-24 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Why Choose Our Cookpad API?
@@ -194,7 +194,7 @@ export default function CookpadApiPage() {
 
       {/* API Endpoints Section */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               API Endpoints
@@ -238,7 +238,7 @@ export default function CookpadApiPage() {
 
       {/* Use Cases Section */}
       <section className="py-24 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Perfect For
@@ -264,7 +264,7 @@ export default function CookpadApiPage() {
 
       {/* Code Example Section */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Quick Start
@@ -321,7 +321,7 @@ console.log(recipe.instructions);`}
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <div className="rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 p-12 shadow-lg border border-border/50">
               <div className="mb-4">

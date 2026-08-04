@@ -66,7 +66,7 @@ export default function PricingPage() {
     <div className="min-h-screen bg-background">
       {/* Hero */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Simple, transparent pricing
@@ -81,7 +81,7 @@ export default function PricingPage() {
 
       {/* Pricing Plans */}
       <section className="pb-24 sm:pb-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {plans.map((plan) => (
               <div
@@ -157,7 +157,7 @@ export default function PricingPage() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/process-mining">Learn How It Works</Link>
+              <Link href="/how-it-works">Learn How It Works</Link>
             </Button>
           </div>
         </div>

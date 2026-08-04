@@ -108,7 +108,7 @@ export function CodeShowcase() {
 
   return (
     <section id="how-it-works" className="py-24 sm:py-32 bg-muted/20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">
             How It Works

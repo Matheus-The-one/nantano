@@ -78,8 +78,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/85 backdrop-blur-md">
+            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-6">
               <div className="flex h-16 items-center justify-between">
                 <Link
                   href="/"
@@ -90,14 +90,16 @@ export default function RootLayout({
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden md:flex items-center gap-1">
                   <Navbar />
-                  <div className="flex items-center gap-3">
-                    <ModeToggle />
-                    <Button asChild size="sm">
-                      <a href="mailto:contact@Veloxiz.ai">Contact Us</a>
-                    </Button>
-                  </div>
+                </div>
+
+                {/* Desktop Right side */}
+                <div className="hidden md:flex items-center gap-3">
+                  <ModeToggle />
+                  <Button asChild size="sm" variant="outline">
+                    <a href="mailto:contact@Veloxiz.ai">Book a Demo</a>
+                  </Button>
                 </div>
 
                 {/* Mobile Navigation */}

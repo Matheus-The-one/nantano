@@ -130,7 +130,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
               Our <span className="text-primary">API Services</span>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="py-12 pb-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <Card
@@ -203,7 +203,7 @@ export default function ServicesPage() {
 
       {/* Why Choose Our APIs */}
       <section className="py-24 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Why Choose Veloxizs?
@@ -237,7 +237,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Ready to Get Started?

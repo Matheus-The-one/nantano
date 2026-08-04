@@ -1,0 +1,12 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stripe-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7C4DFF"/>
+      <stop offset="100%" stop-color="#635BFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#stripe-g)"/>
+  <!-- S curve made of two offset rounded rects -->
+  <path d="M24 13 C24 13 14 12 14 17 C14 21 24 22 24 26 C24 31 14 30 14 30"
+        stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>

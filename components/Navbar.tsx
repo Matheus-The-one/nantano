@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, BookOpen, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,47 +12,59 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { name: "How It Works", href: "/process-mining" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "How It Works", href: "/how-it-works" },
+  { name: "Use Cases",    href: "/use-cases"    },
+  { name: "Docs",         href: "/docs"         },
+  { name: "Pricing",      href: "/pricing"      },
 ];
 
 export function Navbar() {
   return (
     <>
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center gap-6">
+      {/* Desktop */}
+      <div className="hidden md:flex items-center gap-1">
         {navLinks.map((link) => (
-          <Link key={link.name} href={link.href}>
-            <p className="text-sm font-medium hover:text-primary transition-colors">
-              {link.name}
-            </p>
+          <Link
+            key={link.name}
+            href={link.href}
+            className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+          >
+            {link.name}
           </Link>
         ))}
       </div>
 
-      {/* Mobile Navigation */}
-      <div className="md:hidden p-4 justify-end">
+      {/* Mobile */}
+      <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <Button className="justify-end" variant="ghost" size="icon">
+            <Button variant="ghost" size="icon">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
-            <SheetTitle className="text-left hidden">Menu</SheetTitle>
-            <nav className="flex flex-col gap-4 mt-8">
-              <Link href="/" className="text-lg font-semibold">
+          <SheetContent side="right" className="w-72">
+            <SheetTitle className="sr-only">Menu</SheetTitle>
+            <nav className="flex flex-col gap-1 mt-8">
+              <Link href="/" className="rounded-lg px-3 py-2.5 text-base font-semibold hover:bg-muted transition-colors">
                 Home
               </Link>
+              <div className="h-px bg-border/50 my-2" />
               {navLinks.map((link) => (
-                <Link key={link.name} href={link.href} className="text-lg font-semibold">
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-muted transition-colors"
+                >
                   {link.name}
                 </Link>
               ))}
-              <Link href="mailto:contact@Veloxiz.ai" className="text-lg font-semibold text-primary">
-                Contact Us
-              </Link>
+              <div className="h-px bg-border/50 my-2" />
+              <div className="px-3 pt-2">
+                <Button className="w-full" asChild>
+                  <a href="mailto:contact@Veloxiz.ai">Book a Demo</a>
+                </Button>
+              </div>
             </nav>
           </SheetContent>
         </Sheet>

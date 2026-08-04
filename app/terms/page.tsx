@@ -74,7 +74,7 @@ export default function TermsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="relative mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex justify-center mb-8">
               <div className="rounded-full bg-primary/10 p-4">
@@ -101,7 +101,7 @@ export default function TermsPage() {
 
       {/* Main Terms Grid */}
       <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {termsSections.map((section, index) => (
               <Card

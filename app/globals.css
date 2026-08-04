@@ -154,3 +154,116 @@
 .animate-scroll-right:hover {
   animation-play-state: paused;
 }
+
+/* Fade-in-up for scroll-triggered sections */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Gradient shimmer text */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    oklch(0.45 0.2 280) 0%,
+    oklch(0.55 0.25 300) 40%,
+    oklch(0.5 0.2 260) 80%,
+    oklch(0.45 0.2 280) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(
+    135deg,
+    oklch(0.65 0.25 280) 0%,
+    oklch(0.75 0.28 300) 40%,
+    oklch(0.7 0.25 260) 80%,
+    oklch(0.65 0.25 280) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mesh gradient background */
+.mesh-gradient {
+  background-color: oklch(1 0 0);
+  background-image:
+    radial-gradient(at 40% 20%, oklch(0.85 0.08 280 / 0.4) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, oklch(0.8 0.1 300 / 0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, oklch(0.9 0.06 260 / 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, oklch(0.85 0.08 290 / 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, oklch(0.88 0.07 270 / 0.3) 0px, transparent 50%);
+}
+
+.dark .mesh-gradient {
+  background-color: oklch(0.145 0 0);
+  background-image:
+    radial-gradient(at 40% 20%, oklch(0.25 0.1 280 / 0.5) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, oklch(0.2 0.08 300 / 0.4) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, oklch(0.2 0.06 260 / 0.3) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, oklch(0.22 0.07 290 / 0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, oklch(0.2 0.06 270 / 0.4) 0px, transparent 50%);
+}
+
+/* Card hover glow */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px oklch(0.45 0.2 280 / 0.12);
+  border-color: oklch(0.45 0.2 280 / 0.3);
+}
+.dark .card-hover:hover {
+  box-shadow: 0 8px 30px oklch(0.65 0.25 280 / 0.2);
+  border-color: oklch(0.65 0.25 280 / 0.3);
+}
+
+/* Dashboard row flash animation */
+@keyframes row-flash {
+  0%   { background-color: oklch(0.5 0.15 280 / 0.10); }
+  100% { background-color: transparent; }
+}
+.row-flash { animation: row-flash 1s ease forwards; }
+
+/* SVG chart line draw animation */
+@keyframes draw-line {
+  to { stroke-dashoffset: 0; }
+}
+.chart-line { animation: draw-line 1.6s ease forwards; }
