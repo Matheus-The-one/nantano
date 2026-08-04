@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description:
       "Access comprehensive doctors database, medical professionals, specialties, and healthcare provider information. Perfect for healthcare apps and medical directory services.",
     type: "website",
-    url: "https://nantano.ai/services/doctors-api",
+    url: "https://Veloxiz.ai/services/doctors-api",
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Access comprehensive doctors database, medical professionals, specialties, and healthcare provider information.",
   },
   alternates: {
-    canonical: "https://nantano.ai/services/doctors-api",
+    canonical: "https://Veloxiz.ai/services/doctors-api",
   },
 };
 
@@ -383,8 +383,8 @@ console.log(doctor);`}
             },
             provider: {
               "@type": "Organization",
-              name: "Nantano AI",
-              url: "https://nantano.ai",
+              name: "Veloxiz",
+              url: "https://Veloxiz.ai",
             },
           }),
         }}

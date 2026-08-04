@@ -15,14 +15,14 @@ export function CTA() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              Book a demo and we&apos;ll show you how Nantano AI structures your
+              Book a demo and we&apos;ll show you how Veloxiz structures your
               processes, detects issues, and delivers real-time alerts your team
               can act on immediately.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <a href="mailto:contact@nantano.ai">
+                <a href="mailto:contact@Veloxiz.ai">
                   Book a Demo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>

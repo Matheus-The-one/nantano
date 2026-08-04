@@ -215,7 +215,7 @@ export default function PrivacyPage() {
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-center space-x-2">
                         <Mail className="h-4 w-4" />
-                        <span>contact@nantano.ai</span>
+                        <span>contact@Veloxiz.ai</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <ExternalLink className="h-4 w-4" />
@@ -242,7 +242,7 @@ export default function PrivacyPage() {
 
                 <div className="mt-6 pt-6 border-t border-border/50">
                   <Button asChild>
-                    <a href="mailto:contact@nantano.ai">
+                    <a href="mailto:contact@Veloxiz.ai">
                       <Mail className="mr-2 h-4 w-4" />
                       Contact Privacy Team
                     </a>

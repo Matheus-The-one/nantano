@@ -142,7 +142,7 @@ export default function AIImageGenerationPage() {
                   <pre className="text-sm leading-relaxed overflow-x-auto">
                     <code className="text-muted-foreground font-mono">
                       {`// Generate an image from text
-const response = await fetch('https://api.nantano.dev/v1/images/generate', {
+const response = await fetch('https://api.Veloxiz.dev/v1/images/generate', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',

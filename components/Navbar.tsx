@@ -50,7 +50,7 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link href="mailto:contact@nantano.ai" className="text-lg font-semibold text-primary">
+              <Link href="mailto:contact@Veloxiz.ai" className="text-lg font-semibold text-primary">
                 Contact Us
               </Link>
             </nav>

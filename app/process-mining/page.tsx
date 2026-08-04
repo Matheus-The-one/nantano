@@ -16,9 +16,9 @@ import Link from "next/link";
 import { PipelineFlow } from "@/components/PipelineFlow";
 
 export const metadata = {
-  title: "How It Works — Nantano AI",
+  title: "How It Works — Veloxiz",
   description:
-    "Learn how Nantano AI structures enterprise data, detects process patterns and anomalies with AI, and delivers real-time notifications when issues arise.",
+    "Learn how Veloxiz structures enterprise data, detects process patterns and anomalies with AI, and delivers real-time notifications when issues arise.",
   keywords:
     "process intelligence, ai pattern detection, anomaly detection, real-time alerts, enterprise process monitoring",
 };
@@ -108,7 +108,7 @@ export default function ProcessMiningPage() {
               <div className="rounded-xl border border-border/50 p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-2.5 w-2.5 rounded-full bg-destructive/60" />
-                  <span className="text-sm font-medium text-muted-foreground">Without Nantano AI</span>
+                  <span className="text-sm font-medium text-muted-foreground">Without Veloxiz</span>
                 </div>
                 <div className="space-y-2">
                   <div className="h-2.5 w-full rounded bg-muted-foreground/10" />
@@ -123,7 +123,7 @@ export default function ProcessMiningPage() {
               <div className="rounded-xl border border-primary/30 bg-primary/[0.02] p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-2.5 w-2.5 rounded-full bg-primary" />
-                  <span className="text-sm font-medium">With Nantano AI</span>
+                  <span className="text-sm font-medium">With Veloxiz</span>
                 </div>
                 <div className="space-y-2 font-mono text-xs text-foreground/70">
                   <div className="flex justify-between p-2 rounded bg-primary/5">
@@ -287,13 +287,13 @@ export default function ProcessMiningPage() {
             See it working on your data
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Book a demo and we&apos;ll show you what Nantano AI can detect in your
+            Book a demo and we&apos;ll show you what Veloxiz can detect in your
             processes — patterns you didn&apos;t know existed, issues you
             haven&apos;t caught yet.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild>
-              <a href="mailto:contact@nantano.ai">
+              <a href="mailto:contact@Veloxiz.ai">
                 Book a Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>

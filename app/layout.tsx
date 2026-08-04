@@ -20,29 +20,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nantano AI — Process Intelligence & Pattern Detection",
+  title: "Veloxiz — Process Intelligence & Pattern Detection",
   description:
     "We structure enterprise data, detect process anomalies with AI, and deliver real-time alerts. Find hidden patterns and fix broken processes before they cost you.",
   keywords:
-    "process intelligence, pattern detection, anomaly detection, enterprise ai, process monitoring, real-time alerts, nantano ai",
+    "process intelligence, pattern detection, anomaly detection, enterprise ai, process monitoring, real-time alerts, Veloxiz",
   openGraph: {
-    title: "Nantano AI — Process Intelligence & Pattern Detection",
+    title: "Veloxiz — Process Intelligence & Pattern Detection",
     description:
       "Structure data. Detect patterns. Get real-time alerts. AI-powered process intelligence for enterprises.",
     type: "website",
-    url: "https://nantano.ai",
-    siteName: "Nantano AI",
+    url: "https://Veloxiz.ai",
+    siteName: "Veloxiz",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nantano AI — Process Intelligence & Pattern Detection",
+    title: "Veloxiz — Process Intelligence & Pattern Detection",
     description:
       "Find hidden patterns. Fix broken processes. Real-time AI alerts.",
   },
   alternates: {
-    canonical: "https://nantano.ai",
+    canonical: "https://Veloxiz.ai",
   },
-  metadataBase: new URL("https://nantano.ai"),
+  metadataBase: new URL("https://Veloxiz.ai"),
 };
 
 export default function RootLayout({
@@ -86,7 +86,7 @@ export default function RootLayout({
                   className="flex-shrink-0 font-bold text-xl hover:text-primary transition-colors flex items-center gap-2"
                 >
                   <Logo className="w-10 h-7 text-primary" />
-                  Nantano AI
+                  Veloxiz
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -95,7 +95,7 @@ export default function RootLayout({
                   <div className="flex items-center gap-3">
                     <ModeToggle />
                     <Button asChild size="sm">
-                      <a href="mailto:contact@nantano.ai">Contact Us</a>
+                      <a href="mailto:contact@Veloxiz.ai">Contact Us</a>
                     </Button>
                   </div>
                 </div>

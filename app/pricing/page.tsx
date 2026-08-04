@@ -3,7 +3,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — Nantano AI",
+  title: "Pricing — Veloxiz",
   description:
     "Simple, transparent pricing for AI-powered process intelligence. Choose the plan that fits your team.",
 };
@@ -128,7 +128,7 @@ export default function PricingPage() {
                   variant={plan.highlighted ? "default" : "outline"}
                   asChild
                 >
-                  <a href="mailto:contact@nantano.ai">
+                  <a href="mailto:contact@Veloxiz.ai">
                     {plan.cta}
                     {plan.highlighted && <ArrowRight className="ml-2 h-4 w-4" />}
                   </a>
@@ -146,12 +146,12 @@ export default function PricingPage() {
             Not sure which plan fits?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Book a demo and we&apos;ll walk you through how Nantano AI can help
+            Book a demo and we&apos;ll walk you through how Veloxiz can help
             your team find process issues before they escalate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="mailto:contact@nantano.ai">
+              <a href="mailto:contact@Veloxiz.ai">
                 Book a Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>

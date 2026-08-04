@@ -7,11 +7,11 @@ const footerLinks = {
   Product: [
     { name: "How It Works", href: "/process-mining" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Book a Demo", href: "mailto:contact@nantano.ai" },
+    { name: "Book a Demo", href: "mailto:contact@Veloxiz.ai" },
   ],
   Company: [
     { name: "About", href: "/about" },
-    { name: "Contact", href: "mailto:contact@nantano.ai" },
+    { name: "Contact", href: "mailto:contact@Veloxiz.ai" },
     { name: "GitHub", href: "https://github.com/Matheus-The-one" },
   ],
   Legal: [
@@ -22,7 +22,7 @@ const footerLinks = {
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/Matheus-The-one" },
-  { name: "Email", icon: Mail, href: "mailto:contact@nantano.ai" },
+  { name: "Email", icon: Mail, href: "mailto:contact@Veloxiz.ai" },
 ];
 
 export function Footer() {
@@ -34,7 +34,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Logo className="w-10 h-7 text-primary" />
-              <div className="font-bold text-2xl">Nantano AI</div>
+              <div className="font-bold text-2xl">Veloxiz</div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
               AI-powered process intelligence. We structure your enterprise data,
@@ -80,7 +80,7 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-16 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Nantano AI. All rights reserved.
+            &copy; {new Date().getFullYear()} Veloxiz. All rights reserved.
           </p>
 
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">

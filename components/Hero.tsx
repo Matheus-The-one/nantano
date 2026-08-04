@@ -28,7 +28,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-muted-foreground sm:text-xl max-w-3xl mx-auto">
-              Nantano AI structures your enterprise data, detects anomalies and
+              Veloxiz structures your enterprise data, detects anomalies and
               inefficiencies in your processes, and notifies you in real-time
               when something needs attention. No manual analysis. Just clarity.
             </p>
@@ -41,7 +41,7 @@ export function Hero() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
-                <a href="mailto:contact@nantano.ai">
+                <a href="mailto:contact@Veloxiz.ai">
                   Book a Demo
                 </a>
               </Button>

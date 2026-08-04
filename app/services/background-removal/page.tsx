@@ -147,7 +147,7 @@ export default function BackgroundRemovalPage() {
 const formData = new FormData();
 formData.append('image', imageFile);
 
-const response = await fetch('https://api.nantano.dev/v1/remove-background', {
+const response = await fetch('https://api.Veloxiz.dev/v1/remove-background', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'

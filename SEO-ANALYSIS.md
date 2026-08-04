@@ -1,4 +1,4 @@
-# 🎯 SEO Analysis for Nantano Studio
+# 🎯 SEO Analysis for Veloxiz Studio
 
 ## ✅ Current SEO Implementation
 
@@ -8,7 +8,7 @@ Your website now has **comprehensive SEO optimization** that will help Google in
 
 ## 🗺️ 1. Sitemap (sitemap.xml)
 
-**Location:** `app/sitemap.ts` → Generates `https://nantano.studio/sitemap.xml`
+**Location:** `app/sitemap.ts` → Generates `https://Veloxiz.studio/sitemap.xml`
 
 **What it does:**
 
@@ -32,7 +32,7 @@ When Googlebot crawls your site, it reads the sitemap and discovers these pages 
 
 ## 🤖 2. Robots.txt
 
-**Location:** `app/robots.ts` → Generates `https://nantano.studio/robots.txt`
+**Location:** `app/robots.ts` → Generates `https://Veloxiz.studio/robots.txt`
 
 **What it does:**
 
@@ -53,7 +53,7 @@ Allow: /services/nike-api
 Allow: /services/cookpad-api
 Allow: /services/doctors-api
 
-Sitemap: https://nantano.studio/sitemap.xml
+Sitemap: https://Veloxiz.studio/sitemap.xml
 ```
 
 ---
@@ -122,8 +122,8 @@ Sitemap: https://nantano.studio/sitemap.xml
   "applicationCategory": "DeveloperApplication",
   "provider": {
     "@type": "Organization",
-    "name": "Nantano Studio",
-    "url": "https://nantano.studio"
+    "name": "Veloxiz Studio",
+    "url": "https://Veloxiz.studio"
   }
 }
 ```
@@ -140,7 +140,7 @@ Sitemap: https://nantano.studio/sitemap.xml
 
 ### **Step 1: Discovery** (1-7 days)
 
-1. Googlebot visits `https://nantano.studio`
+1. Googlebot visits `https://Veloxiz.studio`
 2. Reads `robots.txt` → Finds sitemap
 3. Opens `sitemap.xml` → Discovers all API pages
 4. Crawls each API page
@@ -175,7 +175,7 @@ Sitemap: https://nantano.studio/sitemap.xml
 | "nike products api"   | Nike API                 | `/services/nike-api`            |
 | "recipes api"         | Cookpad API              | `/services/cookpad-api`         |
 | "medical api"         | Doctors API              | `/services/doctors-api`         |
-| "Nantano Studio"             | Homepage or Services     | `/` or `/services`              |
+| "Veloxiz Studio"             | Homepage or Services     | `/` or `/services`              |
 
 ---
 
@@ -202,9 +202,9 @@ Sitemap: https://nantano.studio/sitemap.xml
 
 ```
 1. Go to: https://search.google.com/search-console
-2. Add property: https://nantano.studio
+2. Add property: https://Veloxiz.studio
 3. Verify ownership
-4. Submit sitemap: https://nantano.studio/sitemap.xml
+4. Submit sitemap: https://Veloxiz.studio/sitemap.xml
 5. Request indexing for main API pages
 ```
 
@@ -263,7 +263,7 @@ A: Usually 3-14 days after submitting sitemap to Google Search Console.
 A: It takes time. Submit to Search Console and wait 2-4 weeks.
 
 **Q: How do I check if pages are indexed?**
-A: Search on Google: `site:nantano.studio/services/nike-api`
+A: Search on Google: `site:Veloxiz.studio/services/nike-api`
 
 **Q: Can I speed up indexing?**
 A: Yes! Submit sitemap to Google Search Console and request indexing for each page manually.
