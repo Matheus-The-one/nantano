@@ -3,7 +3,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — Veloxiz",
+  title: "Pricing - Veloxiz",
   description:
     "Simple, transparent pricing for AI-powered process intelligence. Choose the plan that fits your team.",
 };

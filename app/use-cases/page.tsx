@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Use Cases — Veloxiz",
+  title: "Use Cases - Veloxiz",
   description:
     "See how Finance, Logistics, Healthcare, and E-Commerce enterprises use Veloxiz to detect process failures before they escalate.",
 };
@@ -12,7 +12,7 @@ const industries = [
     slug:        "finance",
     industry:    "Finance",
     headline:    "Catch reconciliation drift before it becomes fraud",
-    description: "Monitor every step of payment and reconciliation pipelines. Get alerted in seconds — not weeks.",
+    description: "Monitor every step of payment and reconciliation pipelines. Get alerted in seconds - not weeks.",
     stats:       [{ value: "< 2 sec", label: "Time to detection" }, { value: "$40K+", label: "Monthly loss prevented" }, { value: "< 3%", label: "False positive rate" }],
   },
   {

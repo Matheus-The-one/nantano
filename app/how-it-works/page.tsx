@@ -1,306 +1,349 @@
-import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Brain,
-  Activity,
-  Bell,
-  Layers,
-  Search,
-  Zap,
-  RefreshCw,
-  Shield,
-  BarChart3,
-  Workflow,
-} from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { PipelineFlow } from "@/components/PipelineFlow";
 
 export const metadata = {
-  title: "How It Works — Veloxiz",
+  title: "How It Works - Veloxiz",
   description:
-    "Learn how Veloxiz structures enterprise data, detects patterns and anomalies with AI, and delivers real-time notifications when issues arise.",
+    "See how Veloxiz connects your market and customer data, scores business gaps with AI, and delivers ranked opportunity briefs your team can act on.",
   keywords:
-    "process intelligence, ai pattern detection, anomaly detection, real-time alerts, enterprise monitoring",
+    "business gap analysis, opportunity discovery, ai market intelligence, how veloxiz works",
 };
 
-export default function ProcessMiningPage() {
+const steps = [
+  {
+    step: "01",
+    title: "Connect your evidence",
+    description:
+      "Plug in CRM, product analytics, support tickets, pricing sheets, and public market sources. Veloxiz maps what you already track into one intelligence layer.",
+  },
+  {
+    step: "02",
+    title: "Learn your strategy",
+    description:
+      "Tell Veloxiz your ICP, constraints, and past bets. It remembers - so every brief stays on-strategy instead of surfacing random market trivia.",
+  },
+  {
+    step: "03",
+    title: "Score the gaps",
+    description:
+      "AI cross-checks win/loss notes, competitor moves, demand signals, and funnel drop-offs - then ranks whitespace by estimated revenue impact.",
+  },
+  {
+    step: "04",
+    title: "Get the brief",
+    description:
+      "Each opportunity arrives with evidence, confidence, and a suggested next move. Approve what becomes an initiative; dismissals teach the model.",
+  },
+  {
+    step: "05",
+    title: "Keep watching",
+    description:
+      "Markets move. Veloxiz keeps scoring - so this week's open gap and next month's competitor opening both show up before the standup does.",
+  },
+];
+
+const capabilities = [
+  {
+    title: "Natural language briefs",
+    body: 'Ask like a strategist - "where are we losing mid-market deals?" or "what adjacent niches look open this quarter."',
+  },
+  {
+    title: "Multi-source gap scoring",
+    body: "Market chatter, CRM outcomes, and product usage scored together - not another siloed dashboard.",
+  },
+  {
+    title: "Human-in-the-loop control",
+    body: "Veloxiz proposes. Your team decides. Feedback sharpens the next round of briefs.",
+  },
+  {
+    title: "Persistent company memory",
+    body: "ICP, pricing rules, and past bets stick - so you never re-explain the strategy.",
+  },
+  {
+    title: "Impact-ranked lists",
+    body: "Every gap carries estimated ARR or leakage, so priorities are obvious.",
+  },
+  {
+    title: "Evidence trails",
+    body: "Click into the signals behind a recommendation - no black-box strategy theater.",
+  },
+];
+
+export default function HowItWorksPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:14px_24px]" />
+      <section className="relative pt-8 sm:pt-10 pb-16 sm:pb-20 overflow-hidden">
+        <div className="site-shell">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] min-h-[420px] sm:min-h-[520px] flex items-end">
+            <Image
+              src="/brand/hero-ui.png"
+              alt=""
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/20" />
+            <div className="absolute inset-0 grain" />
 
-        <div className="relative mx-auto max-w-screen-xl px-6 lg:px-6">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-3 py-1 text-sm mb-8">
-              <Brain className="mr-2 h-4 w-4 text-primary" />
-              <span className="text-muted-foreground">
-                Our core technology
-              </span>
+            <div className="relative z-10 w-full p-8 sm:p-12 lg:p-16 max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+                How it works
+              </p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.05]">
+                From raw signals
+                <br />
+                to ranked gaps
+              </h1>
+              <p className="mt-5 text-base sm:text-lg text-white/75 leading-relaxed max-w-xl">
+                Veloxiz turns market noise and customer evidence into opportunity
+                briefs - so your team finds the whitespace before competitors do.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="mailto:contact@Veloxiz.ai"
+                  className="btn-ink inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold"
+                >
+                  <span className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-white">
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                  Book a demo
+                </a>
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md hover:bg-white/20 transition-colors"
+                >
+                  View pricing
+                </Link>
+              </div>
             </div>
-
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Process Intelligence
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-              We use AI to understand how your enterprise processes work —
-              structuring raw data, detecting patterns and anomalies, and
-              delivering real-time alerts the moment something needs attention.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Interactive Pipeline Flow */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-              System Architecture
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              How data flows through our system
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              An interactive view of our intelligence pipeline — from raw input
-              to structured alerts.
+      {/* Pipeline */}
+      <section className="pb-20 sm:pb-28">
+        <div className="site-shell">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+                System flow
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-[1.1]">
+                How data becomes an opportunity map
+              </h2>
+            </div>
+            <p className="text-muted-foreground max-w-md lg:text-right">
+              Interactive view of the intelligence pipeline - from sources to a
+              brief your team can act on.
             </p>
           </div>
           <PipelineFlow />
         </div>
       </section>
 
-      {/* The Problem */}
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-                The Problem
+      {/* Problem */}
+      <section className="pb-20 sm:pb-28">
+        <div className="site-shell">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+                The problem
               </p>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                Enterprise data is a mess
+              <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-[1.1] mb-5">
+                Growth teams drown in data and still miss the gap
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Your operations generate massive amounts of data across dozens of
-                systems. But without structure, you can&apos;t see what&apos;s
-                happening — issues hide in noise, patterns go unnoticed, and
-                problems only surface after they&apos;ve already done damage.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5">
+                Dashboards show what already happened. Chat tools answer questions
+                you already know to ask. The expensive misses - underserved segments,
+                packaging holes, competitor openings - stay invisible.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                We fix this by bringing AI-powered structure and intelligence to
-                your data — turning chaos into clarity, and silence into
-                real-time awareness.
+                Veloxiz is built to surface those gaps continuously, ranked by
+                impact, with the evidence attached.
               </p>
-              <div className="grid grid-cols-2 gap-y-3 gap-x-6">
-                {["Invisible bottlenecks", "Silent failures", "Undetected drift", "Delayed responses"].map((item) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  "Blind competitive whitespace",
+                  "Silent churn patterns",
+                  "Underserved segments",
+                  "Late strategy pivots",
+                ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-destructive/60" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                     <span className="text-sm text-muted-foreground">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Visual: before/after */}
-            <div className="space-y-6">
-              <div className="rounded-xl border border-border/50 p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-2.5 w-2.5 rounded-full bg-destructive/60" />
-                  <span className="text-sm font-medium text-muted-foreground">Without Veloxiz</span>
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="rounded-[1.5rem] border border-border/70 bg-card p-6 sm:p-7">
+                <div className="flex items-center gap-2.5 mb-5">
+                  <span className="h-2 w-2 rounded-full bg-warm" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-warm">
+                    Without Veloxiz
+                  </span>
                 </div>
-                <div className="space-y-2">
-                  <div className="h-2.5 w-full rounded bg-muted-foreground/10" />
-                  <div className="h-2.5 w-4/5 rounded bg-muted-foreground/10" />
-                  <div className="h-2.5 w-3/4 rounded bg-muted-foreground/10" />
-                  <div className="h-2.5 w-full rounded bg-muted-foreground/10" />
-                  <div className="h-2.5 w-2/3 rounded bg-muted-foreground/10" />
+                <div className="space-y-2.5">
+                  <div className="h-2.5 w-full rounded-full bg-muted" />
+                  <div className="h-2.5 w-4/5 rounded-full bg-muted" />
+                  <div className="h-2.5 w-3/4 rounded-full bg-muted" />
+                  <div className="h-2.5 w-full rounded-full bg-muted" />
+                  <div className="h-2.5 w-2/3 rounded-full bg-muted" />
                 </div>
-                <p className="text-xs text-muted-foreground mt-3">Raw, unstructured, invisible</p>
+                <p className="text-xs text-muted-foreground mt-5">
+                  Scattered metrics. No ranked opportunities.
+                </p>
               </div>
 
-              <div className="rounded-xl border border-primary/30 bg-primary/[0.02] p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-2.5 w-2.5 rounded-full bg-primary" />
-                  <span className="text-sm font-medium">With Veloxiz</span>
+              <div className="rounded-[1.5rem] border border-primary/25 bg-accent/40 p-6 sm:p-7">
+                <div className="flex items-center gap-2.5 mb-5">
+                  <span className="h-2 w-2 rounded-full bg-primary" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+                    With Veloxiz
+                  </span>
                 </div>
-                <div className="space-y-2 font-mono text-xs text-foreground/70">
-                  <div className="flex justify-between p-2 rounded bg-primary/5">
-                    <span>process.order_fulfillment</span>
-                    <span className="text-green-600">normal</span>
+                <div className="space-y-2 font-mono text-xs">
+                  <div className="flex justify-between gap-3 p-2.5 rounded-xl bg-background/80">
+                    <span className="truncate">mid_market.onboarding_gap</span>
+                    <span className="text-primary font-semibold shrink-0">$1.2M</span>
                   </div>
-                  <div className="flex justify-between p-2 rounded bg-destructive/5 border border-destructive/20">
-                    <span>process.payment_reconciliation</span>
-                    <span className="text-destructive">anomaly</span>
+                  <div className="flex justify-between gap-3 p-2.5 rounded-xl bg-background/80 border border-primary/20">
+                    <span className="truncate">apac.competitor_whitespace</span>
+                    <span className="text-primary font-semibold shrink-0">High</span>
                   </div>
-                  <div className="flex justify-between p-2 rounded bg-primary/5">
-                    <span>process.inventory_sync</span>
-                    <span className="text-green-600">normal</span>
+                  <div className="flex justify-between gap-3 p-2.5 rounded-xl bg-background/80">
+                    <span className="truncate">pricing.attach_rate_leak</span>
+                    <span className="text-foreground font-semibold shrink-0">Watch</span>
                   </div>
                 </div>
-                <p className="text-xs text-primary mt-3">Structured, monitored, actionable</p>
+                <p className="text-xs text-primary mt-5 font-medium">
+                  Structured, ranked, actionable
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works — timeline */}
-      <section className="py-24 sm:py-32 bg-muted/20">
-        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
-          <div className="mx-auto max-w-2xl text-center mb-20">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-              Our Process
+      {/* Steps - vertical timeline, not tiny cards */}
+      <section className="pb-20 sm:pb-28">
+        <div className="site-shell">
+          <div className="max-w-2xl mb-12 sm:mb-16">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+              The path
             </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Structure. Detect. Notify.
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-[1.1]">
+              Five steps from connect to clarity
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              From the first source you connect to the weekly brief your team
+              actually uses - here&apos;s the full loop.
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            {[
-              {
-                step: "01",
-                icon: Layers,
-                title: "Connect & Structure",
-                description: "Plug in your data sources. Our AI automatically maps relationships, infers schemas, and builds a structured view of your processes.",
-              },
-              {
-                step: "02",
-                icon: Search,
-                title: "Learn Patterns",
-                description: "The system learns what normal looks like for your operations — baselines, rhythms, expected flows, and healthy ranges.",
-              },
-              {
-                step: "03",
-                icon: Activity,
-                title: "Detect Anomalies",
-                description: "When something deviates from the norm — a bottleneck, a data footprint that doesn't match, or a broken handoff — the AI flags it instantly.",
-              },
-              {
-                step: "04",
-                icon: Bell,
-                title: "Notify in Real-Time",
-                description: "Alerts arrive via WebSocket the moment an issue is detected. No batch delays, no email buried in noise. Your team knows immediately.",
-              },
-              {
-                step: "05",
-                icon: BarChart3,
-                title: "Provide Context",
-                description: "Every alert comes with full context — what happened, where in the process, what's affected, and suggested next steps.",
-              },
-            ].map((item, index) => (
-              <div key={item.step} className="relative flex gap-8 pb-14 last:pb-0">
-                {index < 4 && (
-                  <div className="absolute left-[23px] top-14 bottom-0 w-px bg-border" />
-                )}
-
-                <div className="relative flex-shrink-0">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <item.icon className="h-5 w-5 text-primary" />
+          <div className="relative max-w-3xl">
+            <div className="absolute left-[19px] top-3 bottom-3 w-px bg-border hidden sm:block" />
+            <div className="space-y-0">
+              {steps.map((item) => (
+                <div key={item.step} className="relative flex gap-5 sm:gap-8 pb-10 last:pb-0">
+                  <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/40 bg-background text-xs font-bold text-primary">
+                    {item.step}
+                  </div>
+                  <div className="pt-1.5 pb-2">
+                    <h3 className="font-display text-xl font-semibold tracking-tight mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-xl">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
-
-                <div className="pt-1">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-primary">
-                    Step {item.step}
-                  </span>
-                  <h3 className="text-xl font-semibold mt-1 mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed max-w-xl">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* AI Capabilities */}
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-              AI Capabilities
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              What our AI does differently
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-5xl mx-auto">
-            {[
-              {
-                icon: Workflow,
-                title: "Adaptive Learning",
-                description: "The system continuously refines its understanding of your processes — catching subtler patterns over time.",
-              },
-              {
-                icon: Brain,
-                title: "Contextual Understanding",
-                description: "Doesn't just flag numbers — understands what a deviation means in the context of your business operations.",
-              },
-              {
-                icon: RefreshCw,
-                title: "Self-Improving Models",
-                description: "Every resolved alert teaches the system. False positives decrease, precision increases, automatically.",
-              },
-              {
-                icon: Shield,
-                title: "Noise Reduction",
-                description: "Smart filtering ensures your team only sees what matters — not every fluctuation, only meaningful deviations.",
-              },
-              {
-                icon: Zap,
-                title: "Sub-Second Detection",
-                description: "From data ingestion to alert delivery in under 2 seconds. Issues are surfaced before they cascade.",
-              },
-              {
-                icon: Activity,
-                title: "Cross-Process Correlation",
-                description: "Identifies when an issue in one process is actually caused by — or affecting — another part of your operation.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="flex-shrink-0 mt-1">
-                  <div className="rounded-lg bg-primary/10 p-2">
-                    <item.icon className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+      {/* Capabilities */}
+      <section className="pb-20 sm:pb-28">
+        <div className="site-shell">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] surface-panel grain">
+            <div className="p-8 sm:p-12 lg:p-14">
+              <div className="max-w-2xl mb-12">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+                  What you get
+                </p>
+                <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-[1.1]">
+                  Built for how strategists actually work
+                </h2>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Not another dashboard dump - briefs your team can run with.
+                </p>
               </div>
-            ))}
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+                {capabilities.map((item) => (
+                  <div key={item.title}>
+                    <div className="mb-3 h-px w-10 bg-primary" />
+                    <h4 className="font-display text-lg font-semibold tracking-tight mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 sm:py-32 bg-muted/20">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-            See it working on your data
-          </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Book a demo and we&apos;ll show you what Veloxiz can detect in your
-            processes — patterns you didn&apos;t know existed, issues you
-            haven&apos;t caught yet.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild>
-              <a href="mailto:contact@Veloxiz.ai">
-                Book a Demo
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/pricing">View Pricing</Link>
-            </Button>
+      <section className="pb-16 sm:pb-24">
+        <div className="site-shell">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] min-h-[360px] sm:min-h-[420px] flex items-end">
+            <Image
+              src="/brand/cta-ui.png"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/25" />
+            <div className="absolute inset-0 grain" />
+
+            <div className="relative z-10 w-full p-8 sm:p-12 lg:p-16 max-w-2xl">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white leading-[1.08]">
+                See the gaps in your market
+              </h2>
+              <p className="mt-4 text-base sm:text-lg text-white/75 leading-relaxed">
+                Book a demo and we&apos;ll walk through an opportunity brief on a
+                market that looks like yours - ranked gaps, evidence, next moves.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="mailto:contact@Veloxiz.ai"
+                  className="btn-ink inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold"
+                >
+                  <span className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-white">
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                  Book a demo
+                </a>
+                <Link
+                  href="/use-cases"
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md hover:bg-white/20 transition-colors"
+                >
+                  Browse use cases
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

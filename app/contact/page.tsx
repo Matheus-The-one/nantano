@@ -52,7 +52,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Whether you&apos;re evaluating Veloxiz, need enterprise pricing, or
-              just want to see it in action — we&apos;re happy to help.
+              just want to see it in action - we&apos;re happy to help.
             </p>
           </div>
         </div>

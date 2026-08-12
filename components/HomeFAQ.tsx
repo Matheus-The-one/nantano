@@ -1,50 +1,71 @@
 "use client";
 
 import { FAQ } from "@/components/FAQ";
-import { SectionHeader } from "@/components/SectionHeader";
+import { ArrowRight } from "lucide-react";
 
 const homeFAQs = [
   {
-    question: "How long does it take to integrate Veloxiz?",
+    question: "How is Veloxiz different from ChatGPT or BI dashboards?",
     answer:
-      "Most teams are ingesting data and seeing their first process map within one business day. We provide pre-built connectors for the most common data sources and a REST API for custom integrations. Our onboarding team guides you through setup.",
+      "ChatGPT answers questions you already know to ask. Dashboards show metrics you already track. Veloxiz continuously scans market signals, customer evidence, and competitive moves to surface business gaps you haven't briefed yet - ranked by estimated impact.",
   },
   {
-    question: "Does Veloxiz work with our existing data stack?",
+    question: "What kinds of gaps does Veloxiz find?",
     answer:
-      "Yes. Veloxiz connects to databases (PostgreSQL, MongoDB, MySQL), cloud storage (S3, GCS, Azure Blob), streaming platforms (Kafka, Kinesis), and SaaS tools via webhooks. If your tool isn't listed, we can build a custom integration.",
+      "Revenue whitespace, underserved segments, pricing and packaging holes, churn-risk patterns, competitor openings, and operational drop-offs that block growth. Each brief includes the evidence trail and a suggested next move.",
   },
   {
-    question: "How does the AI detect anomalies without false positives?",
+    question: "How long does setup take?",
     answer:
-      "Our AI first learns your baseline — what normal looks like for each of your processes across time, seasonality, and load patterns. Deviations are scored by severity and context before an alert is sent. Over time, feedback you provide further reduces noise.",
+      "Most teams connect their first sources and receive an initial opportunity brief within one business day. Pre-built connectors cover common CRMs, warehouses, and SaaS tools; custom sources plug in via API.",
   },
   {
-    question: "Can we deploy on our own infrastructure?",
+    question: "Is our data safe?",
     answer:
-      "Yes. Enterprise customers can deploy Veloxiz entirely within their own infrastructure — on-premise or in a private cloud. This is available on our Enterprise plan and is fully supported with dedicated engineering assistance.",
+      "Yes. Encryption in transit and at rest, role-based access, audit trails, and optional private-cloud or on-prem deployment for enterprise customers. We never train public models on your private data.",
   },
   {
-    question: "What does 'real-time' actually mean?",
+    question: "What if a recommended gap is wrong?",
     answer:
-      "Our detection-to-alert pipeline operates in under 2 seconds end-to-end. Alerts are delivered via persistent WebSocket connections, so your team sees issues the moment they are detected — not in a scheduled digest or daily report.",
+      "Every brief is scored with confidence and evidence. You approve what becomes an initiative. Feedback on dismissals and wins sharpens future scoring for your ICP and strategy.",
   },
 ];
 
 export function HomeFAQ() {
   return (
-    <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-screen-xl px-6 lg:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-          <div>
-            <SectionHeader
-              eyebrow="FAQ"
-              title="Common questions"
-              description="Still have a question? Email us at contact@veloxiz.ai"
-              centered={false}
-            />
+    <section className="py-20 sm:py-28">
+      <div className="site-shell">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+              FAQ
+            </p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-[1.1]">
+              Questions
+              <br />
+              answered.
+            </h2>
+            <p className="mt-4 text-muted-foreground">Still curious?</p>
+            <a
+              href="mailto:contact@Veloxiz.ai"
+              className="mt-4 btn-ink inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+            >
+              <span className="flex h-5 w-5 items-center justify-center rounded-md bg-primary text-white">
+                <ArrowRight className="h-3 w-3" />
+              </span>
+              Chat with us
+            </a>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Email{" "}
+              <a
+                href="mailto:contact@Veloxiz.ai"
+                className="text-foreground underline underline-offset-2"
+              >
+                contact@veloxiz.ai
+              </a>
+            </p>
           </div>
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-8">
             <FAQ items={homeFAQs} />
           </div>
         </div>

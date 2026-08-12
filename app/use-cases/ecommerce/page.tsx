@@ -1,7 +1,7 @@
 import { UseCaseDetail } from "../_components/UseCaseDetail";
 
 export const metadata = {
-  title: "E-Commerce — Use Cases — Veloxiz",
+  title: "E-Commerce - Use Cases - Veloxiz",
   description: "How e-commerce teams use Veloxiz to monitor order fulfillment at scale with zero blind spots.",
 };
 

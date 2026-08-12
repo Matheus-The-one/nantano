@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Syne, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { ModeToggle } from "@/components/ui/themwitcher";
 import { Footer } from "@/components/Footer";
-import Link from "next/link";
-import { Logo } from "@/components/Logo";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
 });
 
 const geistMono = Geist_Mono({
@@ -20,24 +23,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Veloxiz — Process Intelligence & Pattern Detection",
+  title: "Veloxiz - Find the business gaps your team can't see",
   description:
-    "We structure enterprise data, detect process anomalies with AI, and deliver real-time alerts. Find hidden patterns and fix broken processes before they cost you.",
+    "AI that scans your market, customers, and operations to surface revenue gaps, unmet demand, and strategic blind spots - before competitors do.",
   keywords:
-    "process intelligence, pattern detection, anomaly detection, enterprise ai, process monitoring, real-time alerts, Veloxiz",
+    "business gap analysis, ai market intelligence, revenue gaps, competitive intelligence, opportunity discovery, Veloxiz",
   openGraph: {
-    title: "Veloxiz — Process Intelligence & Pattern Detection",
+    title: "Veloxiz - Find the business gaps your team can't see",
     description:
-      "Structure data. Detect patterns. Get real-time alerts. AI-powered process intelligence for enterprises.",
+      "AI-powered business gap discovery. Spot missed revenue, unmet demand, and strategic blind spots.",
     type: "website",
     url: "https://Veloxiz.ai",
     siteName: "Veloxiz",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veloxiz — Process Intelligence & Pattern Detection",
+    title: "Veloxiz - Find the business gaps your team can't see",
     description:
-      "Find hidden patterns. Fix broken processes. Real-time AI alerts.",
+      "AI that finds revenue gaps, unmet demand, and strategic blind spots.",
   },
   alternates: {
     canonical: "https://Veloxiz.ai",
@@ -51,9 +54,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" className="dark" suppressHydrationWarning={true}>
       <head>
-        {/* Google tag (gtag.js) */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-VXK8K00TKJ"
@@ -70,46 +72,16 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen overflow-x-hidden`}
+        className={`${dmSans.variable} ${syne.variable} ${geistMono.variable} font-sans antialiased min-h-screen overflow-x-hidden bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/85 backdrop-blur-md">
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-6">
-              <div className="flex h-16 items-center justify-between">
-                <Link
-                  href="/"
-                  className="flex-shrink-0 font-bold text-xl hover:text-primary transition-colors flex items-center gap-2"
-                >
-                  <Logo className="w-10 h-7 text-primary" />
-                  Veloxiz
-                </Link>
-
-                {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-1">
-                  <Navbar />
-                </div>
-
-                {/* Desktop Right side */}
-                <div className="hidden md:flex items-center gap-3">
-                  <ModeToggle />
-                  <Button asChild size="sm" variant="outline">
-                    <a href="mailto:contact@Veloxiz.ai">Book a Demo</a>
-                  </Button>
-                </div>
-
-                {/* Mobile Navigation */}
-                <div className="md:hidden flex items-center gap-2">
-                  <ModeToggle />
-                  <Navbar />
-                </div>
-              </div>
-            </div>
-          </header>
+          <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>

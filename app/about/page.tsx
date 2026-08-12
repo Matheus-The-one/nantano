@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us — Veloxiz",
+  title: "About Us - Veloxiz",
   description:
     "Learn about Veloxiz, our mission to bring AI-powered Process Intelligence to enterprises, and the team building it.",
   keywords: "Veloxiz about, process intelligence company, enterprise ai team",
@@ -22,7 +22,7 @@ const values = [
     icon: Eye,
     title: "Radical Transparency",
     description:
-      "Every alert comes with full context — what happened, where, and why. We believe visibility creates trust, both in our product and in your operations.",
+      "Every alert comes with full context - what happened, where, and why. We believe visibility creates trust, both in our product and in your operations.",
   },
   {
     icon: Target,
@@ -76,7 +76,7 @@ const team = [
   {
     name: "Matheus Fernandes",
     title: "Founder & CEO",
-    bio: "Previously led data engineering at scale. Saw firsthand how invisible process failures cost enterprises millions — and decided to fix it.",
+    bio: "Previously led data engineering at scale. Saw firsthand how invisible process failures cost enterprises millions - and decided to fix it.",
     initials: "MF",
   },
   {
@@ -151,7 +151,7 @@ export default function AboutPage() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Our mission is to give every operations team the same real-time
                 awareness of their processes that elite engineering teams have of
-                their infrastructure — and to do it without requiring a team of
+                their infrastructure - and to do it without requiring a team of
                 data scientists.
               </p>
             </div>

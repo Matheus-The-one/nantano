@@ -4,7 +4,6 @@ import { useCallback } from "react";
 import {
   ReactFlow,
   Background,
-  Controls,
   type Node,
   type Edge,
   Position,
@@ -15,29 +14,37 @@ const nodeDefaults = {
   sourcePosition: Position.Right,
   targetPosition: Position.Left,
   style: {
-    borderRadius: "12px",
+    borderRadius: "14px",
     fontSize: "13px",
     fontWeight: 600,
     padding: "12px 16px",
-    border: "1px solid hsl(var(--border))",
-    background: "hsl(var(--card))",
-    color: "hsl(var(--foreground))",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+    border: "1px solid rgba(247,247,244,0.12)",
+    background: "#1e1a16",
+    color: "#f7f7f4",
+    boxShadow: "0 2px 10px rgba(0,0,0,0.25)",
   },
 };
 
 const primaryStyle = {
   ...nodeDefaults.style,
-  background: "oklch(0.45 0.2 280)",
-  color: "#fff",
-  border: "1px solid oklch(0.45 0.2 280)",
+  background: "#f59e2e",
+  color: "#14110e",
+  border: "1px solid #f59e2e",
+  boxShadow: "0 8px 28px rgba(245,158,46,0.35)",
+};
+
+const darkStyle = {
+  ...nodeDefaults.style,
+  background: "#0c0a08",
+  color: "#f7f7f4",
+  border: "1px solid rgba(247,247,244,0.15)",
 };
 
 const nodes: Node[] = [
   {
     id: "source",
     position: { x: 0, y: 120 },
-    data: { label: "Data Sources" },
+    data: { label: "Market + CRM data" },
     ...nodeDefaults,
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
@@ -45,51 +52,46 @@ const nodes: Node[] = [
   {
     id: "crawl",
     position: { x: 220, y: 40 },
-    data: { label: "Ingest & Structure" },
+    data: { label: "Normalize signals" },
     ...nodeDefaults,
   },
   {
     id: "analyze",
     position: { x: 220, y: 200 },
-    data: { label: "Learn Baselines" },
+    data: { label: "Learn your ICP" },
     ...nodeDefaults,
   },
   {
     id: "process",
     position: { x: 460, y: 120 },
-    data: { label: "AI Pattern Engine" },
+    data: { label: "Gap scoring engine" },
     ...nodeDefaults,
     style: primaryStyle,
   },
   {
     id: "validate",
     position: { x: 680, y: 40 },
-    data: { label: "Detect Anomalies" },
+    data: { label: "Rank opportunities" },
     ...nodeDefaults,
   },
   {
     id: "cache",
     position: { x: 680, y: 200 },
-    data: { label: "Correlate Events" },
+    data: { label: "Attach evidence" },
     ...nodeDefaults,
   },
   {
     id: "serve",
     position: { x: 900, y: 120 },
-    data: { label: "Real-Time Alerts" },
+    data: { label: "Opportunity brief" },
     ...nodeDefaults,
-    style: {
-      ...nodeDefaults.style,
-      background: "oklch(0.25 0.05 280)",
-      color: "#fff",
-      border: "1px solid oklch(0.3 0.1 280)",
-    },
+    style: darkStyle,
   },
 ];
 
 const edgeDefaults = {
   animated: true,
-  style: { stroke: "oklch(0.45 0.2 280)", strokeWidth: 2 },
+  style: { stroke: "#f59e2e", strokeWidth: 2 },
 };
 
 const edges: Edge[] = [
@@ -107,13 +109,13 @@ export function PipelineFlow() {
   const onInit = useCallback(() => {}, []);
 
   return (
-    <div className="w-full h-[400px] sm:h-[450px] rounded-2xl border border-border/50 bg-card/50 overflow-hidden">
+    <div className="w-full h-[420px] sm:h-[480px] rounded-[2rem] surface-panel grain overflow-hidden border border-border/40">
       <ReactFlow
         nodes={nodes}
         edges={edges}
         onInit={onInit}
         fitView
-        fitViewOptions={{ padding: 0.3 }}
+        fitViewOptions={{ padding: 0.28 }}
         proOptions={{ hideAttribution: true }}
         nodesDraggable={false}
         nodesConnectable={false}
@@ -123,7 +125,7 @@ export function PipelineFlow() {
         zoomOnDoubleClick={false}
         preventScrolling={false}
       >
-        <Background color="hsl(var(--border))" gap={20} size={1} />
+        <Background color="#3a3229" gap={20} size={1} />
       </ReactFlow>
     </div>
   );

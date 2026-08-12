@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: Key,
     title: "Role-Based Access",
-    description: "Fine-grained permission controls so each team member sees only what they need — with full audit trails on every action.",
+    description: "Fine-grained permission controls so each team member sees only what they need - with full audit trails on every action.",
   },
   {
     icon: Eye,
