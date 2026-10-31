@@ -156,12 +156,12 @@ export default function DocsPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                   Natural language in. Ranked opportunities out - with estimated impact.
                 </p>
-                <a
-                  href="mailto:contact@Veloxiz.ai"
+                <Link
+                  href="/signin"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80"
                 >
                   Request API access <ArrowRight className="h-3.5 w-3.5" />
-                </a>
+                </Link>
               </div>
               <div className="bg-[#0c0a08] p-5 sm:p-6 lg:p-8 border-t lg:border-t-0 lg:border-l border-border/40 overflow-x-auto">
                 <pre className="font-mono text-[12px] sm:text-[13px] leading-relaxed text-foreground/85">

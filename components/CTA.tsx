@@ -30,15 +30,15 @@ export function CTA() {
               spots every week. Set up in days. Cancel anytime. Your first brief is on us.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a
-                href="mailto:contact@Veloxiz.ai"
+              <Link
+                href="/signin"
                 className="btn-ink inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold shadow-lg transition-transform hover:-translate-y-0.5"
               >
                 <span className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-white">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
                 Get started free
-              </a>
+              </Link>
               <Link
                 href="/how-it-works"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md hover:bg-white/20 transition-colors"

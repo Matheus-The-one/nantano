@@ -22,6 +22,7 @@ const plans = [
       "Community support",
     ],
     cta: "Get Started",
+    ctaHref: "/signin",
     highlighted: false,
   },
   {
@@ -39,6 +40,7 @@ const plans = [
       "Team collaboration",
     ],
     cta: "Start Free Trial",
+    ctaHref: "/signin",
     highlighted: true,
   },
   {
@@ -57,6 +59,7 @@ const plans = [
       "Custom AI model training",
     ],
     cta: "Book a Demo",
+    ctaHref: "mailto:contact@Veloxiz.ai",
     highlighted: false,
   },
 ];
@@ -128,10 +131,17 @@ export default function PricingPage() {
                   variant={plan.highlighted ? "default" : "outline"}
                   asChild
                 >
-                  <a href="mailto:contact@Veloxiz.ai">
-                    {plan.cta}
-                    {plan.highlighted && <ArrowRight className="ml-2 h-4 w-4" />}
-                  </a>
+                  {plan.ctaHref.startsWith("/") ? (
+                    <Link href={plan.ctaHref}>
+                      {plan.cta}
+                      {plan.highlighted && <ArrowRight className="ml-2 h-4 w-4" />}
+                    </Link>
+                  ) : (
+                    <a href={plan.ctaHref}>
+                      {plan.cta}
+                      {plan.highlighted && <ArrowRight className="ml-2 h-4 w-4" />}
+                    </a>
+                  )}
                 </Button>
               </div>
             ))}
