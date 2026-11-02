@@ -12,6 +12,15 @@ export const TABLES = {
   memory: "VELOXIZ_MEMORY",
 } as const;
 
+/**
+ * Recency index on VELOXIZ_CONVERSATIONS (userId + updatedAt).
+ *
+ * The base table sorts by `conversationId`, a uuid, so it cannot answer
+ * "most recent N chats" without reading every row. Queries for the chat
+ * history use this index instead.
+ */
+export const CONVERSATIONS_BY_UPDATED_AT = "byUpdatedAt";
+
 export const AWS_REGION = process.env.AWS_REGION ?? "us-east-1";
 
 function readCredentials() {

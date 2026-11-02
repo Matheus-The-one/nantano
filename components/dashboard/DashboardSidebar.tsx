@@ -7,7 +7,6 @@ import {
   BookOpen,
   ChevronLeft,
   LogOut,
-  MessagesSquare,
   Network,
   PanelLeft,
   Plug,
@@ -36,14 +35,9 @@ type NavItem = {
   description: string;
 };
 
-/** Mirrors the product pipeline: ask, connect evidence, diagnose, remember. */
+/** Mirrors the product pipeline: connect evidence, diagnose, remember.
+ *  The chat surface itself is reached via "New chat" and the Recent list. */
 const navItems: NavItem[] = [
-  {
-    name: "Home",
-    href: "/dashboard",
-    icon: MessagesSquare,
-    description: "Ask for a brief",
-  },
   {
     name: "Connectors",
     href: "/dashboard/connectors",
@@ -79,9 +73,6 @@ export function DashboardSidebar({ user }: { user: SessionPayload }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   function isActive(href: string): boolean {
-    // An open conversation is represented by its own highlighted row in the
-    // history list below, so Home deselects to avoid two active items.
-    if (href === "/dashboard") return pathname === "/dashboard";
     return pathname.startsWith(href);
   }
 
@@ -91,8 +82,14 @@ export function DashboardSidebar({ user }: { user: SessionPayload }) {
         href="/dashboard"
         onClick={() => setMobileOpen(false)}
         title={collapsed ? "New chat" : undefined}
+        // Highlighted only on the blank chat page. An open conversation is
+        // represented by its own row in Recent instead.
+        aria-current={pathname === "/dashboard" ? "page" : undefined}
         className={cn(
-          "group mb-1 flex items-center gap-3 rounded-xl border border-sidebar-border px-3 py-2.5 text-sm font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-accent/60",
+          "group mb-1 flex items-center gap-3 rounded-xl border border-sidebar-border px-3 py-2.5 text-sm font-medium transition-colors",
+          pathname === "/dashboard"
+            ? "bg-sidebar-accent text-sidebar-accent-foreground"
+            : "text-sidebar-foreground hover:bg-sidebar-accent/60",
           collapsed && "justify-center px-0"
         )}
       >

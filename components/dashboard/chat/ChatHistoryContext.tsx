@@ -9,7 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { deriveTitle } from "@/lib/ai/messages";
-import type { ConversationSummary } from "@/lib/db/conversations";
+import type { ConversationSummary } from "@/lib/conversations/schema";
 
 /**
  * Shared chat history.
@@ -21,6 +21,8 @@ import type { ConversationSummary } from "@/lib/db/conversations";
  */
 type ChatHistoryValue = {
   conversations: ConversationSummary[];
+  /** True when the server has more conversations than were seeded here. */
+  hasMore: boolean;
   /** Records activity for a conversation, moving it to the top of the list. */
   touch: (conversationId: string, firstUserText: string) => void;
   remove: (conversationId: string) => void;
@@ -30,9 +32,11 @@ const ChatHistoryContext = createContext<ChatHistoryValue | null>(null);
 
 export function ChatHistoryProvider({
   initial,
+  hasMore = false,
   children,
 }: {
   initial: ConversationSummary[];
+  hasMore?: boolean;
   children: ReactNode;
 }) {
   const [conversations, setConversations] = useState(initial);
@@ -68,8 +72,8 @@ export function ChatHistoryProvider({
   }, []);
 
   const value = useMemo(
-    () => ({ conversations, touch, remove }),
-    [conversations, touch, remove]
+    () => ({ conversations, hasMore, touch, remove }),
+    [conversations, hasMore, touch, remove]
   );
 
   return (
