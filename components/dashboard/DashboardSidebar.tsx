@@ -12,9 +12,11 @@ import {
   PanelLeft,
   Plug,
   Settings,
+  SquarePen,
   type LucideIcon,
 } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { ChatHistoryList } from "@/components/dashboard/ChatHistoryList";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -77,13 +79,27 @@ export function DashboardSidebar({ user }: { user: SessionPayload }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   function isActive(href: string): boolean {
-    // /dashboard must not light up for every nested route.
+    // An open conversation is represented by its own highlighted row in the
+    // history list below, so Home deselects to avoid two active items.
     if (href === "/dashboard") return pathname === "/dashboard";
     return pathname.startsWith(href);
   }
 
   const nav = (
-    <nav className="flex flex-1 flex-col gap-1 px-3 py-4">
+    <nav className="flex flex-col gap-1 px-3 py-4">
+      <Link
+        href="/dashboard"
+        onClick={() => setMobileOpen(false)}
+        title={collapsed ? "New chat" : undefined}
+        className={cn(
+          "group mb-1 flex items-center gap-3 rounded-xl border border-sidebar-border px-3 py-2.5 text-sm font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-accent/60",
+          collapsed && "justify-center px-0"
+        )}
+      >
+        <SquarePen className="h-[18px] w-[18px] shrink-0 text-primary" />
+        {!collapsed ? <span className="truncate">New chat</span> : null}
+      </Link>
+
       {navItems.map((item) => {
         const active = isActive(item.href);
 
@@ -249,6 +265,15 @@ export function DashboardSidebar({ user }: { user: SessionPayload }) {
         ) : null}
 
         {nav}
+
+        {/* Chat history fills the remaining space and scrolls on its own. The
+            collapsed rail is icon-width only, so it is hidden there. */}
+        {collapsed ? (
+          <div className="flex-1" />
+        ) : (
+          <ChatHistoryList onNavigate={() => setMobileOpen(false)} />
+        )}
+
         {userMenu}
       </aside>
     </>

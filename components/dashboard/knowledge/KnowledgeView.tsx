@@ -9,7 +9,7 @@ import {
   memoryKindLabel,
   type Memory,
   type MemoryKind,
-} from "@/lib/db/memory";
+} from "@/lib/memory/schema";
 import { cn } from "@/lib/utils";
 
 const KINDS: MemoryKind[] = [

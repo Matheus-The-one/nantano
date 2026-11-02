@@ -52,7 +52,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning={true}>
+    // `data-scroll-behavior` tells Next the smooth scrolling in globals.css
+    // is intentional (marketing anchor links) and must not be applied to
+    // route transitions, where it would fight the chat transcript autoscroll.
+    <html
+      lang="en"
+      className="dark"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning={true}
+    >
       <head>
         <script
           async

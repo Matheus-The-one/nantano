@@ -5,64 +5,22 @@ import {
   QueryCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { getDocClient, TABLES } from "@/lib/db/client";
+import type {
+  Memory,
+  MemoryKind,
+  MemoryOrigin,
+} from "@/lib/memory/schema";
 
 /**
- * Knowledge base: the durable facts Veloxiz has learned about a company.
+ * Knowledge base storage: the durable facts Veloxiz has learned about a
+ * company. This is what makes gap scoring sharpen over time, so each entry
+ * keeps the connector it came from as its evidence trail.
  *
- * Two origins:
- *  - `extracted` : derived from a connected source during ingestion.
- *  - `stated`    : told to Veloxiz directly by the user.
- *
- * This is what makes gap scoring sharpen over time, so each entry keeps the
- * connector it came from as its evidence trail.
+ * Shapes and labels live in `lib/memory/schema.ts` so client components can
+ * use them without pulling in the AWS SDK.
  */
-
-export type MemoryKind =
-  | "icp"
-  | "constraint"
-  | "metric"
-  | "competitor"
-  | "preference"
-  | "process";
-
-export type MemoryOrigin = "extracted" | "stated";
-
-export type Memory = {
-  userId: string;
-  memoryId: string;
-  kind: MemoryKind;
-  /** The learned fact, phrased as a single sentence. */
-  content: string;
-  origin: MemoryOrigin;
-  /** Connector ids this was derived from. Empty for user-stated facts. */
-  sourceConnectorIds: string[];
-  /** Model confidence 0-1, only meaningful for extracted entries. */
-  confidence?: number;
-  createdAt: string;
-  updatedAt: string;
-};
-
-export function memoryKindLabel(kind: MemoryKind): string {
-  switch (kind) {
-    case "icp":
-      return "Ideal customer";
-    case "constraint":
-      return "Constraint";
-    case "metric":
-      return "Metric";
-    case "competitor":
-      return "Competitor";
-    case "preference":
-      return "Preference";
-    case "process":
-      return "Process";
-    default: {
-      // Exhaustiveness guard: new memory kinds must be labelled here.
-      const never: never = kind;
-      return never;
-    }
-  }
-}
+export type { Memory, MemoryKind, MemoryOrigin } from "@/lib/memory/schema";
+export { memoryKindLabel, MEMORY_KINDS } from "@/lib/memory/schema";
 
 export async function listMemories(userId: string): Promise<Memory[]> {
   const result = await getDocClient().send(
