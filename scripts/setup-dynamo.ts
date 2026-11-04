@@ -76,6 +76,7 @@ const tables: CreateTableCommandInput[] = [
     AttributeDefinitions: [
       { AttributeName: "userId", AttributeType: "S" },
       { AttributeName: "connectorId", AttributeType: "S" },
+      { AttributeName: "createdAt", AttributeType: "S" },
     ],
   },
   {
